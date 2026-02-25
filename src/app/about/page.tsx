@@ -1,6 +1,30 @@
 import { Compass, Target, History, Users, Award } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
 import SectionHeader from '@/components/SectionHeader';
+import Image from 'next/image';
+
+const teams = [
+  {
+    name: 'John Magnus',
+    role: 'CEO & Founder',
+    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=70&w=500',
+  },
+  {
+    name: 'Sarah Chen',
+    role: 'Head of R&D',
+    img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=70&w=500',
+  },
+  {
+    name: 'Marcus Thorne',
+    role: 'Lead Product Designer',
+    img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=70&w=500',
+  },
+  {
+    name: 'Elena Rossi',
+    role: 'Quality Control Manager',
+    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=70&w=500',
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -28,11 +52,12 @@ export default function AboutPage() {
               </p>
             </AnimatedSection>
             <AnimatedSection direction="left" className="relative group">
-              <div className="aspect-video rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=70&w=1000"
                   alt="Manufacturing Facility"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  fill
+                  className="aspect-video rounded-3xl shadow-2xl object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full flex items-center justify-center text-white shadow-xl">
@@ -173,38 +198,18 @@ export default function AboutPage() {
           centered
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            {
-              name: 'John Magnus',
-              role: 'CEO & Founder',
-              img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80',
-            },
-            {
-              name: 'Sarah Chen',
-              role: 'Head of R&D',
-              img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80',
-            },
-            {
-              name: 'Marcus Thorne',
-              role: 'Lead Product Designer',
-              img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80',
-            },
-            {
-              name: 'Elena Rossi',
-              role: 'Quality Control Manager',
-              img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80',
-            },
-          ].map((person, idx) => (
+          {teams.map((person, idx) => (
             <AnimatedSection
               key={idx}
               delay={idx * 0.1}
               className="group cursor-pointer"
             >
               <div className="relative aspect-3/4 overflow-hidden rounded-2xl mb-4 bg-muted">
-                <img
+                <Image
                   src={person.img}
                   alt={person.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>

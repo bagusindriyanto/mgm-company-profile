@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Zap, Globe, Activity } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
 import SectionHeader from '@/components/SectionHeader';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -9,8 +10,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-transparent z-10" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30" />
-
+        <Image
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=70&w=1000"
+          alt="Aero-Running Apparel"
+          fill
+          className="object-cover opacity-30"
+        />
         <div className="container mx-auto px-6 relative z-20">
           <AnimatedSection direction="up" className="max-w-3xl">
             <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl mb-6">
@@ -40,7 +45,7 @@ export default function Home() {
 
         {/* Floating Stats Card - Bottom Left */}
         <AnimatedSection
-          direction="right"
+          direction="left"
           delay={0.4}
           className="absolute bottom-10 right-30 z-20 hidden lg:block"
         >
@@ -72,10 +77,15 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <AnimatedSection
-            direction="left"
+            direction="right"
             className="group relative h-[400px] overflow-hidden rounded-3xl bg-muted"
           >
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+            <Image
+              src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=70&w=1000"
+              alt="Technical Gloves"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end">
               <h3 className="text-3xl font-bold text-white mb-2">
                 Technical Gloves
@@ -94,10 +104,15 @@ export default function Home() {
           </AnimatedSection>
 
           <AnimatedSection
-            direction="right"
+            direction="left"
             className="group relative h-[400px] overflow-hidden rounded-3xl bg-muted"
           >
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+            <Image
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=70&w=1000"
+              alt="Aero-Running Apparel"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-110"
+            />
             <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end">
               <h3 className="text-3xl font-bold text-white mb-2">
                 Aero-Running Apparel

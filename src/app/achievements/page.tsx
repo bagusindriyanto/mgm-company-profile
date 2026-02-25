@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
 import SectionHeader from '@/components/SectionHeader';
+import Image from 'next/image';
 
 const achievements = [
   {
@@ -39,27 +40,27 @@ const certificates = [
 
 const galleryImages = [
   {
-    url: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80',
+    url: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=70&w=800',
     title: 'Testing Lab',
   },
   {
-    url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80',
+    url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=70&w=800',
     title: 'Automated Looming',
   },
   {
-    url: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80',
+    url: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=70&w=800',
     title: 'Showroom Display',
   },
   {
-    url: 'https://images.unsplash.com/photo-1491336477066-31156b5e4f3c?auto=format&fit=crop&q=80',
+    url: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=70&w=1200',
     title: 'Athlete Focus Group',
   },
   {
-    url: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80',
+    url: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=70&w=800',
     title: 'Quality Audit',
   },
   {
-    url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80',
+    url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=70&w=800',
     title: 'Global Summit 2024',
   },
 ];
@@ -155,10 +156,11 @@ export default function AchievementsPage() {
               delay={idx * 0.05}
               className="group relative aspect-square overflow-hidden rounded-3xl bg-muted"
             >
-              <img
+              <Image
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 src={img.url}
                 alt={img.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                 <div className="flex items-center gap-2 text-white mb-2">

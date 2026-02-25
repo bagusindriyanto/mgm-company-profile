@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
-import SectionHeader from '@/components/SectionHeader';
+import Image from 'next/image';
+// import SectionHeader from '@/components/SectionHeader';
 
 export default function ContactPage() {
   return (
@@ -27,7 +28,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Info Cards */}
           <div className="lg:col-span-1 space-y-6">
-            <AnimatedSection direction="left" delay={0.1}>
+            <AnimatedSection direction="right" delay={0.1}>
               <div className="bg-card border border-border p-8 rounded-3xl shadow-xl shadow-black/5">
                 <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
                   <MessageSquare className="text-primary" /> Contact Details
@@ -93,7 +94,7 @@ export default function ContactPage() {
 
             {/* Support Box */}
             <AnimatedSection
-              direction="left"
+              direction="right"
               delay={0.2}
               className="bg-primary/5 border border-primary/20 p-8 rounded-3xl"
             >
@@ -113,7 +114,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <AnimatedSection
-              direction="right"
+              direction="left"
               delay={0.2}
               className="bg-card border border-border p-10 rounded-3xl shadow-xl shadow-black/5 h-full"
             >
@@ -186,7 +187,12 @@ export default function ContactPage() {
           direction="up"
           className="rounded-3xl overflow-hidden h-[400px] border border-border relative group"
         >
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80')] bg-cover bg-center grayscale opacity-50 transition-all group-hover:grayscale-0 group-hover:opacity-100" />
+          <Image
+            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=70&w=1200"
+            alt="Global Map"
+            fill
+            className="object-cover grayscale opacity-50 transition-all group-hover:grayscale-0 group-hover:opacity-100"
+          />
           <div className="absolute inset-0 bg-primary/10" />
           <div className="relative h-full flex items-center justify-center">
             <div className="glass-morphism p-8 rounded-2xl text-center border border-white/20">

@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import AnimatedSection from '@/components/AnimatedSection';
 import SectionHeader from '@/components/SectionHeader';
+import Image from 'next/image';
 
 const programs = [
   {
@@ -105,8 +106,13 @@ export default function ProgramsPage() {
           direction="up"
           className="relative h-[400px] rounded-3xl overflow-hidden bg-foreground"
         >
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40" />
-          <div className="absolute inset-0 bg-linear-to-t from-black to-transparent" />
+          <Image
+            fill
+            src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&q=70&w=1000"
+            className="object-cover opacity-40"
+            alt="Want to Partner with Us"
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
           <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
             <h2 className="text-3xl font-extrabold text-white mb-6 md:text-5xl">
               Want to Partner With Us?
