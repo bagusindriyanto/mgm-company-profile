@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import AnimatedSection from './AnimatedSection';
+import AnimatedSection from './animated-section';
 
 interface SectionHeaderProps {
   title: string;

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter, Outfit } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} antialiased selection:bg-primary/20 selection:text-primary`}
       >
+        <NextTopLoader showSpinner={false} />
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main className="grow pt-20">{children}</main>

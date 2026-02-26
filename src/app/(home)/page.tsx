@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Zap, Globe, Activity } from 'lucide-react';
-import AnimatedSection from '@/components/AnimatedSection';
-import SectionHeader from '@/components/SectionHeader';
+import AnimatedSection from '@/components/animated-section';
+import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
 
 export default function Home() {

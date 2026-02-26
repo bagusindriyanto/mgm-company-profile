@@ -6,8 +6,8 @@ import {
   Globe2,
   Heart,
 } from 'lucide-react';
-import AnimatedSection from '@/components/AnimatedSection';
-import SectionHeader from '@/components/SectionHeader';
+import AnimatedSection from '@/components/animated-section';
+import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
 
 const programs = [

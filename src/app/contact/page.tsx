@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from 'lucide-react';
-import AnimatedSection from '@/components/AnimatedSection';
+import AnimatedSection from '@/components/animated-section';
 import Image from 'next/image';
 // import SectionHeader from '@/components/SectionHeader';
 

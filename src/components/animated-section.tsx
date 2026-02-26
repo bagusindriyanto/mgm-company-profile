@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'motion/react';
 import { cn } from '@/lib/utils';
 
 interface AnimatedSectionProps {
@@ -17,9 +16,6 @@ export default function AnimatedSection({
   delay = 0,
   direction = 'up',
 }: AnimatedSectionProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
   const variants = {
     hidden: {
       opacity: 0,
@@ -35,9 +31,9 @@ export default function AnimatedSection({
 
   return (
     <motion.div
-      ref={ref}
       initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
+      whileInView="visible"
+      viewport={{ once: true, margin: '-100px' }}
       variants={variants}
       transition={{
         duration: 0.8,
