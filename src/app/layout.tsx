@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter, Outfit } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/navbar';
-import Footer from '@/components/footer';
+import Navbar from '@/components/new-navbar';
+import Footer from '@/components/new-footer';
 import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({
