@@ -8,6 +8,7 @@ import {
   MapPin,
   Trophy,
 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,12 +20,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Trophy size={18} />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-foreground">
-                MGM <span className="text-primary">SPORTS</span>
-              </span>
+              <Image
+                src="/image/logo-black.png"
+                alt="MGM Logo"
+                width={100}
+                height={100}
+                className="object-contain"
+              />
             </Link>
             <p className="text-sm text-secondary leading-relaxed">
               Excellence in manufacturing sports equipment. Specializing in
@@ -147,7 +149,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-secondary">
-            © {currentYear} MGM Sports Manufacturing. All rights reserved.
+            © {currentYear} Mercindo Global Manufaktur. All rights reserved.
           </p>
           <div className="flex gap-6 text-xs text-secondary">
             <Link href="#" className="hover:text-primary transition-colors">

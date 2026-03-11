@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Zap, Globe, Activity } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Zap, Globe } from 'lucide-react';
 import AnimatedSection from '@/components/animated-section';
 import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
@@ -24,7 +24,7 @@ export default function Home() {
             </h1>
             <p className="text-xl text-secondary mb-10 leading-relaxed max-w-2xl">
               From high-grip tactical gloves to ultra-breathable running
-              apparel, MGM Sports manufactures the gear that pushes boundaries.
+              apparel, MGM manufactures the gear that pushes boundaries.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -184,7 +184,7 @@ export default function Home() {
             </h2>
             <p className="text-lg opacity-90 mb-10 max-w-2xl mx-auto">
               Partner with a manufacturer that understands the nuances of elite
-              sports equipment. Let's discuss your custom manufacturing
+              sports equipment. Let&apos;s discuss your custom manufacturing
               requirements.
             </p>
             <Link

@@ -40,9 +40,9 @@ export default function AboutPage() {
             <AnimatedSection direction="right">
               <p className="text-lg text-secondary leading-relaxed mb-6">
                 Founded in a small workshop by a group of passionate marathon
-                runners and material engineers, MGM Sports began with a single
-                mission: to create the perfect running glove that wouldn't
-                compromise tactile feedback for warmth.
+                runners and material engineers, MGM began with a single mission:
+                to create the perfect running glove that wouldn't compromise
+                tactile feedback for warmth.
               </p>
               <p className="text-lg text-secondary leading-relaxed">
                 Today, we operate from a state-of-the-art 50,000 sq ft
@@ -80,26 +80,24 @@ export default function AboutPage() {
             direction="up"
             className="bg-primary p-12 rounded-3xl text-primary-foreground relative overflow-hidden group"
           >
-            <Compass
+            <Target
               size={80}
               className="absolute -top-4 -right-4 opacity-10 group-hover:scale-110 transition-transform duration-500"
             />
             <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
               <Target size={32} /> Our Vision
             </h3>
-            <p className="text-xl leading-relaxed opacity-90">
-              To become the global benchmark for technical sports equipment,
-              where every athlete—from the hobbyist to the Olympian—feels
-              empowered by the gear they wear.
+            <p className="text-xl leading-relaxed opacity-90 italic">
+              Be blessing for many people.
             </p>
           </AnimatedSection>
 
           <AnimatedSection
             direction="up"
             delay={0.1}
-            className="bg-card border border-border p-12 rounded-3xl relative overflow-hidden group"
+            className="bg-accent border border-border p-12 rounded-3xl relative overflow-hidden group"
           >
-            <Award
+            <Compass
               size={80}
               className="absolute -top-4 -right-4 opacity-5 group-hover:scale-110 transition-transform duration-500 text-primary"
             />
@@ -107,9 +105,8 @@ export default function AboutPage() {
               <Compass size={32} className="text-primary" /> Our Mission
             </h3>
             <p className="text-xl leading-relaxed text-secondary italic">
-              "To engineer high-performance sports equipment through sustainable
-              innovation, relentless testing, and a deep understanding of human
-              movement."
+              To be the Best Glove Manufacturer with Blessing for People
+              Involved.
             </p>
           </AnimatedSection>
         </div>
@@ -128,7 +125,7 @@ export default function AboutPage() {
                 {
                   year: '2011',
                   title: 'The First Prototype',
-                  desc: "MGM Sports is founded. The 'Apex' running glove prototype is tested in sub-zero alpine conditions.",
+                  desc: "Mercindo Global Manufaktur is founded. The 'Apex' running glove prototype is tested in sub-zero alpine conditions.",
                 },
                 {
                   year: '2014',

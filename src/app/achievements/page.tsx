@@ -86,9 +86,8 @@ export default function AchievementsPage() {
               <Award className="text-primary" size={40} /> Awards
             </h3>
             <p className="text-secondary leading-relaxed mb-8">
-              MGM Sports has been recognized by industry leaders for our
-              innovation, quality standards, and commitment to environmental
-              sustainability.
+              MGM has been recognized by industry leaders for our innovation,
+              quality standards, and commitment to environmental sustainability.
             </p>
           </div>
           <div className="lg:col-span-2 space-y-6">

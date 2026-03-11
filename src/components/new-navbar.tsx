@@ -9,8 +9,9 @@ import {
   useScroll,
   useMotionValueEvent,
 } from 'motion/react';
-import { Menu, X, Trophy, Shirt } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -34,17 +35,18 @@ export default function Navbar() {
     <nav
       className={cn(
         'fixed left-0 right-0 top-0 z-50 transition-all duration-300 px-6 py-4',
-        scrolled ? 'glass-morphism py-3' : 'bg-transparent',
+        scrolled ? 'glass-morphism py-3' : 'bg-background',
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-transform group-hover:scale-110">
-            <Trophy size={24} />
-          </div>
-          <span className="text-xl font-bold tracking-tight text-foreground">
-            MGM <span className="text-primary">SPORTS</span>
-          </span>
+          <Image
+            src="/image/logo-black.png"
+            alt="MGM Logo"
+            width={150}
+            height={150}
+            className="object-cover"
+          />
         </Link>
 
         {/* Desktop Nav */}

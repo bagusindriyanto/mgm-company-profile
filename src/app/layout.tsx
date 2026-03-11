@@ -1,22 +1,27 @@
 import type { Metadata } from 'next';
-import { Inter, Outfit } from 'next/font/google';
+import { Manrope, Lora, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/new-navbar';
 import Footer from '@/components/new-footer';
 import NextTopLoader from 'nextjs-toploader';
 
-const inter = Inter({
-  variable: '--font-inter',
+const fontSans = Manrope({
   subsets: ['latin'],
+  variable: '--font-sans',
 });
 
-const outfit = Outfit({
-  variable: '--font-outfit',
+const fontSerif = Lora({
   subsets: ['latin'],
+  variable: '--font-serif',
+});
+
+const fontMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
 });
 
 export const metadata: Metadata = {
-  title: 'MGM Sports | High-Performance Equipment',
+  title: 'Mercindo Global Manufaktur',
   description:
     'Elite manufacturer of high-performance gloves and running apparel for athletes world-wide.',
 };
@@ -29,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased selection:bg-primary/20 selection:text-primary`}
+        className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiasedselection:bg-primary/20 selection:text-primary`}
       >
         <NextTopLoader showSpinner={false} />
         <div className="flex min-h-screen flex-col">
