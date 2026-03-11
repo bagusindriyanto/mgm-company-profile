@@ -49,7 +49,7 @@ export default function Home() {
           delay={0.4}
           className="absolute bottom-10 right-30 z-20 hidden lg:block"
         >
-          <div className="glass-morphism p-6 rounded-2xl border border-border flex gap-8">
+          <div className="bg-card/60 backdrop-blur-sm p-6 rounded-2xl border border-border flex gap-8">
             <div>
               <p className="text-3xl font-bold text-primary">15+</p>
               <p className="text-xs font-bold uppercase tracking-wider text-secondary">

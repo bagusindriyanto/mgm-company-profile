@@ -195,7 +195,7 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-primary/10" />
           <div className="relative h-full flex items-center justify-center">
-            <div className="glass-morphism p-8 rounded-2xl text-center border border-white/20">
+            <div className="bg-card/60 backdrop-blur-sm p-8 rounded-2xl text-center border border-white/20">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4 animate-bounce">
                 <MapPin size={32} />
               </div>

@@ -34,8 +34,8 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed left-0 right-0 top-0 z-50 transition-all duration-300 px-6 py-4',
-        scrolled ? 'glass-morphism py-3' : 'bg-background',
+        'bg-background fixed left-0 right-0 top-0 z-50 transition-all duration-300 px-6 py-4',
+        { 'md:bg-card/60 backdrop-blur-sm py-3': scrolled },
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
