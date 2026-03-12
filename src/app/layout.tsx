@@ -1,23 +1,38 @@
 import type { Metadata } from 'next';
-import { Manrope, Lora, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/new-navbar';
-import Footer from '@/components/new-footer';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 import NextTopLoader from 'nextjs-toploader';
+import { cn } from '@/lib/utils';
+import { Roboto, Roboto_Mono } from 'next/font/google';
 
-const fontSans = Manrope({
-  subsets: ['latin'],
-  variable: '--font-sans',
+const robotoMono = Roboto_Mono({
+  subsets: [
+    'cyrillic',
+    'cyrillic-ext',
+    'greek',
+    'latin',
+    'latin-ext',
+    'vietnamese',
+  ],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  variable: '--font-roboto-mono',
 });
 
-const fontSerif = Lora({
-  subsets: ['latin'],
-  variable: '--font-serif',
-});
-
-const fontMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
+const roboto = Roboto({
+  subsets: [
+    'cyrillic',
+    'cyrillic-ext',
+    'greek',
+    'greek-ext',
+    'latin',
+    'latin-ext',
+    'math',
+    'symbols',
+    'vietnamese',
+  ],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-roboto',
 });
 
 export const metadata: Metadata = {
@@ -32,10 +47,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiasedselection:bg-primary/20 selection:text-primary`}
-      >
+    <html
+      lang="en"
+      className={cn(
+        'font-roboto',
+        'font-roboto-mono',
+        roboto.variable,
+        robotoMono.variable,
+        'antialiased',
+      )}
+    >
+      <body className="selection:bg-primary/20 selection:text-primary">
         <NextTopLoader showSpinner={false} />
         <div className="flex min-h-screen flex-col">
           <Navbar />

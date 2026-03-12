@@ -6,7 +6,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Trophy,
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -28,7 +27,7 @@ export default function Footer() {
                 className="object-contain"
               />
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-secondary leading-relaxed">
               Excellence in manufacturing sports equipment. Specializing in
               high-performance gloves and breathable running apparel for the
               modern athlete.
@@ -36,19 +35,19 @@ export default function Footer() {
             <div className="flex gap-4">
               <Link
                 href="#"
-                className="h-8 w-8 rounded-full bg-border flex items-center justify-center text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className="h-8 w-8 rounded-full bg-border flex items-center justify-center text-secondary transition-colors hover:bg-primary hover:text-primary-foreground"
               >
                 <Facebook size={18} />
               </Link>
               <Link
                 href="#"
-                className="h-8 w-8 rounded-full bg-border flex items-center justify-center text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className="h-8 w-8 rounded-full bg-border flex items-center justify-center text-secondary transition-colors hover:bg-primary hover:text-primary-foreground"
               >
                 <Instagram size={18} />
               </Link>
               <Link
                 href="#"
-                className="h-8 w-8 rounded-full bg-border flex items-center justify-center text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                className="h-8 w-8 rounded-full bg-border flex items-center justify-center text-secondary transition-colors hover:bg-primary hover:text-primary-foreground"
               >
                 <Twitter size={18} />
               </Link>
@@ -60,7 +59,7 @@ export default function Footer() {
             <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-foreground">
               Company
             </h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
+            <ul className="space-y-4 text-sm text-secondary">
               <li>
                 <Link
                   href="/about"
@@ -101,7 +100,7 @@ export default function Footer() {
             <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-foreground">
               Products
             </h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
+            <ul className="space-y-4 text-sm text-secondary">
               <li>
                 <Link href="#" className="hover:text-primary transition-colors">
                   Athletic Gloves
@@ -130,17 +129,17 @@ export default function Footer() {
             <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-foreground">
               Contact Us
             </h4>
-            <ul className="space-y-4 text-sm text-muted-foreground">
+            <ul className="space-y-4 text-sm text-secondary">
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="shrink-0" />
+                <MapPin size={18} className="text-primary shrink-0" />
                 <span>123 Manufacturing Way, Industrial City, IC 12345</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={18} className="shrink-0" />
+                <Phone size={18} className="text-primary shrink-0" />
                 <span>+1 (234) 567-890</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={18} className="shrink-0" />
+                <Mail size={18} className="text-primary shrink-0" />
                 <span>info@mgmsports.com</span>
               </li>
             </ul>
@@ -148,10 +147,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-xs text-secondary">
             © {currentYear} Mercindo Global Manufaktur. All rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-muted-foreground">
+          <div className="flex gap-6 text-xs text-secondary">
             <Link href="#" className="hover:text-primary transition-colors">
               Privacy Policy
             </Link>

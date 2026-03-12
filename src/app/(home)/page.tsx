@@ -10,12 +10,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-transparent z-10" />
-        <Image
-          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=70&w=1000"
-          alt="Aero-Running Apparel"
-          fill
-          className="object-cover opacity-30"
-        />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover md:left-auto md:right-[5%] md:w-[50%] lg:w-[40%] xl:w-[35%]"
+        >
+          <source src="/video/rungloves-animated.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
         <div className="container mx-auto px-6 relative z-20">
           <AnimatedSection direction="up" className="max-w-3xl">
             <h1 className="text-5xl font-extrabold tracking-tight sm:text-7xl mb-6">

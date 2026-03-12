@@ -35,10 +35,10 @@ export default function Navbar() {
     <nav
       className={cn(
         'bg-background fixed left-0 right-0 top-0 z-50 transition-all duration-300 px-6 py-4',
-        { 'md:bg-card/60 backdrop-blur-sm py-3': scrolled },
+        { 'bg-card/70 backdrop-blur-sm py-3': scrolled },
       )}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between">
+      <div className="mx-auto flex max-w-9xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <Image
             src="/image/logo-black.png"
