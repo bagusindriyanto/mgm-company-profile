@@ -17,6 +17,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Programs', href: '/programs' },
+  { name: 'Products', href: '/products' },
   { name: 'Achievements', href: '/achievements' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -34,23 +35,24 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        'bg-background fixed left-0 right-0 top-0 z-50 transition-all duration-300 px-6 py-4',
-        { 'bg-card/70 backdrop-blur-sm py-3': scrolled },
+        'fixed top-0 right-0 left-0 z-50 px-6 py-4 transition-all duration-300 bg-background',
+        { 'py-3 backdrop-blur-sm bg-card/70': scrolled },
       )}
     >
-      <div className="mx-auto flex max-w-9xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
+      <div className="flex justify-between items-center mx-auto max-w-7xl">
+        <Link href="/" className="flex gap-2 items-center group">
           <Image
-            src="/image/logo-black.png"
+            src="/logo/logo-black.png"
+            loading="eager"
             alt="MGM Logo"
-            width={150}
-            height={150}
-            className="object-cover"
+            width={100}
+            height={100}
+            className="object-contain w-auto"
           />
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden gap-8 items-center md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -72,7 +74,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="rounded-full bg-primary px-6 py-2 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
+            className="px-6 py-2 text-sm font-semibold rounded-full transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
           >
             Get a Quote
           </Link>
@@ -80,7 +82,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-md text-foreground md:hidden"
+          className="flex justify-center items-center w-10 h-10 rounded-md text-foreground md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -96,7 +98,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden md:hidden"
           >
-            <div className="flex flex-col gap-4 pb-6 pt-4">
+            <div className="flex flex-col gap-4 pt-4 pb-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -112,7 +114,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="mt-2 w-full rounded-lg bg-primary py-3 text-center text-sm font-semibold text-primary-foreground"
+                className="py-3 mt-2 w-full text-sm font-semibold text-center rounded-lg bg-primary text-primary-foreground"
                 onClick={() => setIsOpen(false)}
               >
                 Get a Quote

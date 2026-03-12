@@ -59,9 +59,9 @@ export default function RootLayout({
     >
       <body className="selection:bg-primary/20 selection:text-primary">
         <NextTopLoader showSpinner={false} />
-        <div className="flex min-h-screen flex-col">
+        <div className="flex flex-col min-h-screen">
           <Navbar />
-          <main className="grow pt-20">{children}</main>
+          <main className="pt-20 grow">{children}</main>
           <Footer />
         </div>
       </body>
