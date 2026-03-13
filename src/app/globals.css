@@ -147,11 +147,12 @@
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
 
-  --font-heading: var(--font-dm-sans);
+  --font-heading: var(--font-inter-tight);
   --font-body: var(--font-roboto);
   --font-mono: var(--font-roboto-mono);
   --font-roboto: var(--font-roboto);
   --font-roboto-mono: var(--font-roboto-mono);
+  --font-inter-tight: var(--font-inter-tight);
 }
 
 @layer base {
@@ -197,15 +198,9 @@
     font-family: var(--font-heading);
     letter-spacing: -0.01em;
   }
-
   body,
   p {
     font-family: var(--font-body);
     line-height: 1.6;
-  }
-
-  code,
-  pre {
-    font-family: var(--font-mono);
   }
 }
