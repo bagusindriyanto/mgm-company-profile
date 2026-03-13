@@ -8,7 +8,7 @@ export default function LogoCloud() {
       <div className="relative px-6 m-auto max-w-7xl group">
         <div className="flex flex-col items-center md:flex-row">
           <div className="md:max-w-44 md:border-r md:pr-6">
-            <p className="text-end">Powering the best teams</p>
+            <p className="text-end">Trusted by our customers and partners</p>
           </div>
           <div className="**:fill-foreground relative py-6 md:w-[calc(100%-11rem)]">
             <InfiniteSlider speedOnHover={20} speed={40} gap={110}>
@@ -43,6 +43,20 @@ export default function LogoCloud() {
               <Image
                 src="/logo/sams-club.svg"
                 alt="Sam's Club"
+                width={200}
+                height={100}
+                className="object-contain w-auto h-8 md:h-10"
+              />
+              <Image
+                src="/logo/almsthre.webp"
+                alt="Almsthre"
+                width={200}
+                height={100}
+                className="object-contain w-auto h-12 md:h-14"
+              />
+              <Image
+                src="/logo/kalibre.png"
+                alt="Kalibre"
                 width={200}
                 height={100}
                 className="object-contain w-auto h-8 md:h-10"

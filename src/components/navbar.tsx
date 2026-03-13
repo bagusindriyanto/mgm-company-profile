@@ -36,15 +36,15 @@ export default function Navbar() {
     <nav
       className={cn(
         'fixed top-0 right-0 left-0 z-50 px-6 py-4 transition-all duration-300 bg-background',
-        { 'py-3 backdrop-blur-sm bg-card/70': scrolled },
+        { 'py-3 backdrop-blur-sm bg-card/70 border-b': scrolled },
       )}
     >
       <div className="flex justify-between items-center mx-auto max-w-7xl">
         <Link href="/" className="flex gap-2 items-center group">
           <Image
-            src="/logo/logo-black.png"
+            src="/logo/mercindo-black.png"
             loading="eager"
-            alt="MGM Logo"
+            alt="MGM"
             width={100}
             height={100}
             className="object-contain w-auto"
@@ -58,8 +58,10 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               className={cn(
-                'relative text-sm font-medium transition-colors hover:text-primary',
-                pathname === link.href ? 'text-primary' : 'text-secondary',
+                'relative text-sm  transition-colors hover:text-primary',
+                pathname === link.href
+                  ? 'text-primary'
+                  : 'text-secondary-foreground',
               )}
             >
               {link.name}
@@ -74,7 +76,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="px-6 py-2 text-sm font-semibold rounded-full transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
+            className="px-6 py-2 text-sm  rounded-full transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
           >
             Get a Quote
           </Link>
@@ -104,8 +106,10 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    'text-lg font-medium transition-colors hover:text-primary',
-                    pathname === link.href ? 'text-primary' : 'text-secondary',
+                    'text-lg  transition-colors hover:text-primary',
+                    pathname === link.href
+                      ? 'text-primary'
+                      : 'text-secondary-foreground',
                   )}
                   onClick={() => setIsOpen(false)}
                 >
@@ -114,7 +118,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="py-3 mt-2 w-full text-sm font-semibold text-center rounded-lg bg-primary text-primary-foreground"
+                className="py-3 mt-2 w-full text-sm  text-center rounded-lg bg-primary text-primary-foreground"
                 onClick={() => setIsOpen(false)}
               >
                 Get a Quote

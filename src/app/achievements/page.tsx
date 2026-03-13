@@ -1,10 +1,4 @@
-import {
-  Award,
-  FileCheck,
-  CheckCircle2,
-  History as HistoryIcon,
-  Camera,
-} from 'lucide-react';
+import { Award, FileCheck, Camera } from 'lucide-react';
 import AnimatedSection from '@/components/animated-section';
 import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
@@ -85,7 +79,7 @@ export default function AchievementsPage() {
             <h3 className="text-3xl font-extrabold flex items-center gap-3 mb-6">
               <Award className="text-primary" size={40} /> Awards
             </h3>
-            <p className="text-secondary leading-relaxed mb-8">
+            <p className="text-secondary-foreground leading-relaxed mb-8">
               MGM has been recognized by industry leaders for our innovation,
               quality standards, and commitment to environmental sustainability.
             </p>
@@ -98,15 +92,13 @@ export default function AchievementsPage() {
                 delay={idx * 0.1}
                 className="bg-card border border-border rounded-2xl p-6 flex gap-6 items-start hover:border-primary/50 transition-colors group"
               >
-                <div className="bg-muted text-primary font-bold px-4 py-2 rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                <div className="bg-muted text-primary px-4 py-2 rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all">
                   {award.year}
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold mb-1">{award.title}</h4>
-                  <p className="text-primary text-sm font-semibold mb-2">
-                    {award.org}
-                  </p>
-                  <p className="text-secondary text-sm leading-relaxed">
+                  <h4 className="text-xl mb-1">{award.title}</h4>
+                  <p className="text-primary text-sm  mb-2">{award.org}</p>
+                  <p className="text-secondary-foreground text-sm leading-relaxed">
                     {award.desc}
                   </p>
                 </div>
@@ -131,9 +123,7 @@ export default function AchievementsPage() {
                   <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
                     <FileCheck className="text-emerald-600" size={20} />
                   </div>
-                  <span className="font-bold text-foreground leading-tight">
-                    {cert}
-                  </span>
+                  <span className="text-foreground leading-tight">{cert}</span>
                 </div>
               </AnimatedSection>
             ))}
@@ -164,11 +154,9 @@ export default function AchievementsPage() {
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                 <div className="flex items-center gap-2 text-white mb-2">
                   <Camera size={18} />
-                  <span className="text-xs font-bold uppercase tracking-widest">
-                    Live Action
-                  </span>
+                  <span className="text-xs uppercase">Live Action</span>
                 </div>
-                <h4 className="text-xl font-bold text-white">{img.title}</h4>
+                <h4 className="text-xl text-white">{img.title}</h4>
               </div>
             </AnimatedSection>
           ))}

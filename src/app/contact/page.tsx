@@ -30,7 +30,7 @@ export default function ContactPage() {
           <div className="lg:col-span-1 space-y-6">
             <AnimatedSection direction="right" delay={0.1}>
               <div className="bg-card border border-border p-8 rounded-3xl shadow-xl shadow-black/5">
-                <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+                <h3 className="text-2xl mb-8 flex items-center gap-3">
                   <MessageSquare className="text-primary" /> Contact Details
                 </h3>
 
@@ -40,10 +40,8 @@ export default function ContactPage() {
                       <MapPin className="text-primary" size={24} />
                     </div>
                     <div>
-                      <p className="font-bold text-foreground mb-1">
-                        Our Location
-                      </p>
-                      <p className="text-secondary text-sm">
+                      <p className="text-foreground mb-1">Our Location</p>
+                      <p className="text-secondary-foreground text-sm">
                         123 Manufacturing Way, Tech District, IC 12345
                       </p>
                     </div>
@@ -54,10 +52,10 @@ export default function ContactPage() {
                       <Phone className="text-primary" size={24} />
                     </div>
                     <div>
-                      <p className="font-bold text-foreground mb-1">
-                        Phone Number
+                      <p className="text-foreground mb-1">Phone Number</p>
+                      <p className="text-secondary-foreground text-sm">
+                        +1 (234) 567-890
                       </p>
-                      <p className="text-secondary text-sm">+1 (234) 567-890</p>
                     </div>
                   </div>
 
@@ -66,10 +64,8 @@ export default function ContactPage() {
                       <Mail className="text-primary" size={24} />
                     </div>
                     <div>
-                      <p className="font-bold text-foreground mb-1">
-                        Email Address
-                      </p>
-                      <p className="text-secondary text-sm">
+                      <p className="text-foreground mb-1">Email Address</p>
+                      <p className="text-secondary-foreground text-sm">
                         sales@mgmsports.com
                       </p>
                     </div>
@@ -80,10 +76,8 @@ export default function ContactPage() {
                       <Clock className="text-primary" size={24} />
                     </div>
                     <div>
-                      <p className="font-bold text-foreground mb-1">
-                        Business Hours
-                      </p>
-                      <p className="text-secondary text-sm">
+                      <p className="text-foreground mb-1">Business Hours</p>
+                      <p className="text-secondary-foreground text-sm">
                         Mon - Fri: 08:00 - 18:00 (GMT+7)
                       </p>
                     </div>
@@ -98,13 +92,13 @@ export default function ContactPage() {
               delay={0.2}
               className="bg-primary/5 border border-primary/20 p-8 rounded-3xl"
             >
-              <h4 className="font-bold text-lg mb-2">Technical Support</h4>
-              <p className="text-secondary text-sm mb-4">
+              <h4 className="text-lg mb-2">Technical Support</h4>
+              <p className="text-secondary-foreground text-sm mb-4">
                 Are you an existing client needing support for custom gear?
               </p>
               <a
                 href="mailto:support@mgmsports.com"
-                className="text-primary font-bold hover:underline"
+                className="text-primary hover:underline"
               >
                 support@mgmsports.com
               </a>
@@ -124,7 +118,7 @@ export default function ContactPage() {
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-foreground ml-1">
+                    <label className="text-sm text-foreground ml-1">
                       Full Name
                     </label>
                     <input
@@ -134,7 +128,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-foreground ml-1">
+                    <label className="text-sm text-foreground ml-1">
                       Email Address
                     </label>
                     <input
@@ -146,7 +140,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-foreground ml-1">
+                  <label className="text-sm text-foreground ml-1">
                     Subject
                   </label>
                   <select className="w-full bg-muted border-transparent rounded-xl px-5 py-4 focus:bg-background focus:border-primary focus:ring-1 focus:ring-primary transition-all outline-none appearance-none">
@@ -159,7 +153,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-foreground ml-1">
+                  <label className="text-sm text-foreground ml-1">
                     Message
                   </label>
                   <textarea
@@ -199,8 +193,8 @@ export default function ContactPage() {
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4 animate-bounce">
                 <MapPin size={32} />
               </div>
-              <h4 className="text-xl font-bold mb-2">Visit Our Factory</h4>
-              <p className="text-sm text-secondary">
+              <h4 className="text-xl mb-2">Visit Our Factory</h4>
+              <p className="text-sm text-secondary-foreground">
                 Interactive map coming soon...
               </p>
             </div>

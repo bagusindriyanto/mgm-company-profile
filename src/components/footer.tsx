@@ -82,14 +82,14 @@ export function Footer() {
             >
               <Link href="/">
                 <Image
-                  src="/logo/logo-black.png"
-                  alt="MGM Logo"
+                  src="/logo/mercindo-black.png"
+                  alt="MGM"
                   width={100}
                   height={100}
                   className="mb-4"
                 />
               </Link>
-              <p className="mb-6 max-w-md text-sm leading-relaxed text-muted-foreground/70">
+              <p className="mb-6 max-w-md text-sm leading-relaxed text-muted-foreground">
                 Excellence in manufacturing sports equipment. Specializing in
                 high-performance gloves and breathable running apparel for the
                 modern athlete.
@@ -98,7 +98,7 @@ export function Footer() {
               {/* Social Links */}
               <div className="flex gap-4 items-center">
                 <motion.a
-                  className="transition-colors text-muted-foreground hover:text-primary"
+                  className="transition-colors text-muted-foreground hover:text-foreground"
                   href={social.facebook}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -116,7 +116,7 @@ export function Footer() {
                   <span className="sr-only">Facebook</span>
                 </motion.a>
                 <motion.a
-                  className="transition-colors text-muted-foreground hover:text-primary"
+                  className="transition-colors text-muted-foreground hover:text-foreground"
                   href={social.instagram}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -134,7 +134,7 @@ export function Footer() {
                   <span className="sr-only">Instagram</span>
                 </motion.a>
                 <motion.a
-                  className="transition-colors text-muted-foreground hover:text-primary"
+                  className="transition-colors text-muted-foreground hover:text-foreground"
                   href={social.linkedin}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -166,14 +166,12 @@ export function Footer() {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h4 className="mb-4 text-sm font-semibold tracking-wide uppercase text-muted-foreground">
-                Product
-              </h4>
+              <h4 className="mb-4 text-sm  uppercase">Product</h4>
               <ul className="space-y-3">
                 {links.product.map((link) => (
                   <li key={link.name}>
                     <Link
-                      className="text-sm transition-colors text-muted-foreground/70 hover:text-primary"
+                      className="text-sm transition-colors text-muted-foreground hover:text-foreground"
                       href={link.url}
                     >
                       {link.name}
@@ -192,14 +190,12 @@ export function Footer() {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h4 className="mb-4 text-sm font-semibold tracking-wide uppercase text-muted-foreground">
-                Company
-              </h4>
+              <h4 className="mb-4 text-sm   uppercase">Company</h4>
               <ul className="space-y-3">
                 {links.company.map((link) => (
                   <li key={link.name}>
                     <Link
-                      className="text-sm transition-colors text-muted-foreground/70 hover:text-primary"
+                      className="text-sm transition-colors text-muted-foreground hover:text-foreground"
                       href={link.url}
                     >
                       {link.name}
@@ -218,14 +214,12 @@ export function Footer() {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h4 className="mb-4 text-sm font-semibold tracking-wide uppercase text-muted-foreground">
-                Contact Us
-              </h4>
+              <h4 className="mb-4 text-sm   uppercase">Contact Us</h4>
               <ul className="space-y-3 text-sm">
                 {links.contact.map((link) => (
                   <li
                     key={link.id}
-                    className="flex gap-3 items-start text-muted-foreground/70"
+                    className="flex gap-3 items-start text-muted-foreground"
                   >
                     <link.icon size={18} className="shrink-0" />
                     <span>{link.description}</span>
@@ -247,7 +241,7 @@ export function Footer() {
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <p className="text-xs text-muted-foreground/70">
+          <p className="text-xs text-muted-foreground">
             © {currentYear} Mercindo Global Manufaktur. All rights reserved.
           </p>
         </motion.div>

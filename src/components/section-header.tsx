@@ -17,16 +17,11 @@ export default function SectionHeader({
   return (
     <div className={cn('mb-12', centered && 'text-center', className)}>
       <AnimatedSection direction="up">
-        <h2 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl md:text-5xl">
+        <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl md:text-5xl">
           {title}
         </h2>
         {subtitle && (
-          <p
-            className={cn(
-              'mt-4 text-lg text-secondary max-w-2xl',
-              centered && 'mx-auto',
-            )}
-          >
+          <p className={cn('mt-4 text-lg max-w-2xl', centered && 'mx-auto')}>
             {subtitle}
           </p>
         )}

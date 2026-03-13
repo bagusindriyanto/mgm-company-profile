@@ -81,15 +81,15 @@ export default function ProgramsPage() {
                 >
                   {program.icon}
                 </div>
-                <span className="text-xs font-bold uppercase tracking-widest text-primary mb-2">
+                <span className="text-xs uppercase  text-primary mb-2">
                   {program.tag}
                 </span>
-                <h3 className="text-2xl font-bold mb-4">{program.title}</h3>
-                <p className="text-secondary leading-relaxed grow">
+                <h3 className="text-2xl mb-4">{program.title}</h3>
+                <p className="text-secondary-foreground leading-relaxed grow">
                   {program.desc}
                 </p>
                 <div className="mt-8 pt-8 border-t border-border flex items-center justify-between">
-                  <span className="text-sm font-bold text-foreground">
+                  <span className="text-sm text-foreground">
                     Status: Active
                   </span>
                   <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)] animate-pulse" />
@@ -121,7 +121,7 @@ export default function ProgramsPage() {
               We are always looking for innovative tech startups and
               sustainability partners to collaborate on our future programs.
             </p>
-            <button className="rounded-full bg-primary px-10 py-4 text-lg font-bold text-white hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20">
+            <button className="rounded-full bg-primary px-10 py-4 text-lg text-white hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20">
               Submit Proposal
             </button>
           </div>

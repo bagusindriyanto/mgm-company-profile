@@ -24,24 +24,24 @@ export default function Home() {
         </video>
         <div className="container relative z-20 px-6 mx-auto">
           <AnimatedSection direction="up" className="max-w-3xl">
-            <h1 className="mb-6 text-5xl font-extrabold tracking-tight sm:text-7xl">
+            <h1 className="mb-6 text-5xl sm:text-7xl">
               Engineering <span className="text-primary">Athletic</span>{' '}
               Performance
             </h1>
-            <p className="mb-10 max-w-2xl text-xl leading-relaxed text-secondary">
+            <p className="mb-10 max-w-2xl text-xl leading-relaxed text-secondary-foreground">
               From high-grip tactical gloves to ultra-breathable running
               apparel, MGM manufactures the gear that pushes boundaries.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/programs"
-                className="px-8 py-4 text-lg font-bold rounded-full transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105"
+                className="px-8 py-4 text-lg rounded-full transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105"
               >
                 View Programs
               </Link>
               <Link
                 href="/about"
-                className="px-8 py-4 text-lg font-bold rounded-full border-2 backdrop-blur-sm transition-all border-primary/20 bg-background/50 text-foreground hover:bg-primary/5 hover:border-primary"
+                className="px-8 py-4 text-lg rounded-full border-2 backdrop-blur-sm transition-all border-primary/20 bg-background/50 text-foreground hover:bg-primary/5 hover:border-primary"
               >
                 Our Story
               </Link>
@@ -59,15 +59,15 @@ export default function Home() {
             >
               <div className="flex gap-8 p-6 rounded-2xl border backdrop-blur-sm bg-card/60 border-border">
                 <div>
-                  <p className="text-3xl font-bold text-primary">15+</p>
-                  <p className="text-xs font-bold tracking-wider uppercase text-secondary">
+                  <p className="text-3xl text-primary">15+</p>
+                  <p className="text-xs uppercase text-secondary-foreground">
                     Years Experience
                   </p>
                 </div>
                 <div className="w-px bg-border" />
                 <div>
-                  <p className="text-3xl font-bold text-primary">50k+</p>
-                  <p className="text-xs font-bold tracking-wider uppercase text-secondary">
+                  <p className="text-3xl text-primary">50k+</p>
+                  <p className="text-xs uppercase text-secondary-foreground">
                     Athletes Equipped
                   </p>
                 </div>
@@ -100,16 +100,14 @@ export default function Home() {
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="flex absolute inset-0 flex-col justify-end p-10 to-transparent bg-linear-to-t from-black/80 via-black/20">
-              <h3 className="mb-2 text-3xl font-bold text-white">
-                Technical Gloves
-              </h3>
+              <h3 className="mb-2 text-3xl text-white">Technical Gloves</h3>
               <p className="mb-6 max-w-sm text-gray-300">
                 Premium grip and protection for extreme environments and
                 competitive sports.
               </p>
               <Link
                 href="/programs"
-                className="flex gap-2 items-center font-bold text-primary hover:underline"
+                className="flex gap-2 items-center text-primary hover:underline"
               >
                 Explore Technology <ArrowRight size={20} />
               </Link>
@@ -127,16 +125,14 @@ export default function Home() {
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="flex absolute inset-0 flex-col justify-end p-10 to-transparent bg-linear-to-t from-black/80 via-black/20">
-              <h3 className="mb-2 text-3xl font-bold text-white">
-                Aero-Running Apparel
-              </h3>
+              <h3 className="mb-2 text-3xl text-white">Aero-Running Apparel</h3>
               <p className="mb-6 max-w-sm text-gray-300">
                 Lightweight, moisture-wicking fabrics engineered for speed and
                 comfort.
               </p>
               <Link
                 href="/programs"
-                className="flex gap-2 items-center font-bold text-primary hover:underline"
+                className="flex gap-2 items-center text-primary hover:underline"
               >
                 View Collection <ArrowRight size={20} />
               </Link>
@@ -174,8 +170,10 @@ export default function Home() {
                 <div className="p-5 mb-6 rounded-2xl shadow-sm bg-background">
                   {value.icon}
                 </div>
-                <h4 className="mb-4 text-xl font-bold">{value.title}</h4>
-                <p className="leading-relaxed text-secondary">{value.desc}</p>
+                <h4 className="mb-4 text-xl ">{value.title}</h4>
+                <p className="leading-relaxed text-secondary-foreground">
+                  {value.desc}
+                </p>
               </AnimatedSection>
             ))}
           </div>
@@ -192,7 +190,7 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 bg-black/10" />
 
           <div className="relative z-10">
-            <h2 className="mb-8 text-3xl font-bold md:text-5xl">
+            <h2 className="mb-8 text-3xl md:text-5xl">
               Ready to Elevate Your Performance?
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-lg opacity-90">
@@ -202,7 +200,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex justify-center items-center px-10 py-4 text-lg font-bold bg-white rounded-full shadow-xl transition-all text-primary hover:bg-gray-100 hover:scale-105 active:scale-95"
+              className="inline-flex justify-center items-center px-10 py-4 text-lg bg-white rounded-full shadow-xl transition-all text-primary hover:bg-gray-100 hover:scale-105 active:scale-95"
             >
               Contact Our Experts
             </Link>

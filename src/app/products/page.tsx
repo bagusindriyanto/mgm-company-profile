@@ -99,10 +99,10 @@ export default function ProductsPage() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
               <div className="flex absolute inset-x-0 bottom-0 flex-col justify-end p-6 to-transparent opacity-90 transition-all duration-300 translate-y-2 bg-linear-to-t from-black/80 via-black/40 group-hover:translate-y-0 group-hover:opacity-100">
-                <span className="mb-1 text-xs font-bold tracking-wider uppercase text-primary">
+                <span className="mb-1 text-xs uppercase text-primary">
                   {product.category}
                 </span>
-                <h3 className="text-xl font-bold text-white">{product.name}</h3>
+                <h3 className="text-xl text-white">{product.name}</h3>
               </div>
             </AnimatedSection>
           ))}
@@ -112,9 +112,7 @@ export default function ProductsPage() {
       {/* Product Gallery Section */}
       <section className="container px-6 mx-auto mt-20">
         <AnimatedSection direction="up" className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-            Gallery
-          </h2>
+          <h2 className="mb-4 text-3xl  sm:text-4xl">Gallery</h2>
           <p className="mx-auto max-w-2xl text-secondary">
             Get a closer look at our premium products in action.
           </p>
@@ -147,16 +145,14 @@ export default function ProductsPage() {
           direction="up"
           className="p-12 text-center rounded-3xl bg-muted/50"
         >
-          <h2 className="mb-4 text-2xl font-bold">
-            Looking for Custom Orders?
-          </h2>
+          <h2 className="mb-4 text-2xl ">Looking for Custom Orders?</h2>
           <p className="mx-auto mb-8 max-w-2xl text-secondary">
             We provide specialized bulk manufacturing and custom branding for
             sports teams, athletic facilities, and corporate partners.
           </p>
           <a
             href="/contact"
-            className="inline-flex justify-center items-center px-8 py-3 text-sm font-bold rounded-full shadow-md transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 active:scale-95"
+            className="inline-flex justify-center items-center px-8 py-3 text-sm rounded-full shadow-md transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 active:scale-95"
           >
             Contact Sales Team
           </a>

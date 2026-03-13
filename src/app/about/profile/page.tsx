@@ -1,4 +1,4 @@
-import { Compass, Target, History, Users, Award } from 'lucide-react';
+import { Compass, Target } from 'lucide-react';
 import AnimatedSection from '@/components/animated-section';
 import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
@@ -38,13 +38,13 @@ export default function AboutPage() {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <AnimatedSection direction="right">
-              <p className="text-lg text-secondary leading-relaxed mb-6">
+              <p className="text-lg text-secondary-foreground leading-relaxed mb-6">
                 Founded in a small workshop by a group of passionate marathon
                 runners and material engineers, MGM began with a single mission:
-                to create the perfect running glove that wouldn't compromise
-                tactile feedback for warmth.
+                to create the perfect running glove that wouldn&apos;t
+                compromise tactile feedback for warmth.
               </p>
-              <p className="text-lg text-secondary leading-relaxed">
+              <p className="text-lg text-secondary-foreground leading-relaxed">
                 Today, we operate from a state-of-the-art 50,000 sq ft
                 manufacturing facility, supplying professional athletes and
                 lifestyle enthusiasts with equipment that integrates the latest
@@ -62,10 +62,8 @@ export default function AboutPage() {
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-full flex items-center justify-center text-white shadow-xl">
                 <div className="text-center">
-                  <p className="text-2xl font-bold italic">14</p>
-                  <p className="text-[10px] uppercase font-bold">
-                    Years of Excellence
-                  </p>
+                  <p className="text-2xl italic">14</p>
+                  <p className="text-[10px] uppercase ">Years of Excellence</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -84,7 +82,7 @@ export default function AboutPage() {
               size={80}
               className="absolute -top-4 -right-4 opacity-10 group-hover:scale-110 transition-transform duration-500"
             />
-            <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
+            <h3 className="text-3xl mb-6 flex items-center gap-3">
               <Target size={32} /> Our Vision
             </h3>
             <p className="text-xl leading-relaxed opacity-90 italic">
@@ -101,10 +99,10 @@ export default function AboutPage() {
               size={80}
               className="absolute -top-4 -right-4 opacity-5 group-hover:scale-110 transition-transform duration-500 text-primary"
             />
-            <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
+            <h3 className="text-3xl mb-6 flex items-center gap-3">
               <Compass size={32} className="text-primary" /> Our Mission
             </h3>
-            <p className="text-xl leading-relaxed text-secondary italic">
+            <p className="text-xl leading-relaxed text-secondary-foreground italic">
               To be the Best Glove Manufacturer with Blessing for People
               Involved.
             </p>
@@ -150,31 +148,27 @@ export default function AboutPage() {
                   <div className="flex-1 md:text-right">
                     {idx % 2 === 0 ? (
                       <AnimatedSection direction="left">
-                        <span className="text-primary font-bold text-2xl">
+                        <span className="text-primary text-2xl">
                           {item.year}
                         </span>
-                        <h4 className="text-xl font-bold mt-2 mb-3">
-                          {item.title}
-                        </h4>
-                        <p className="text-secondary">{item.desc}</p>
+                        <h4 className="text-xl mt-2 mb-3">{item.title}</h4>
+                        <p className="text-secondary-foreground">{item.desc}</p>
                       </AnimatedSection>
                     ) : (
                       <div className="hidden md:block" />
                     )}
                   </div>
-                  <div className="relative z-10 w-12 h-12 rounded-full bg-primary border-4 border-background shadow-lg shrink-0 flex items-center justify-center text-white font-bold">
+                  <div className="relative z-10 w-12 h-12 rounded-full bg-primary border-4 border-background shadow-lg shrink-0 flex items-center justify-center text-white ">
                     {idx + 1}
                   </div>
                   <div className="flex-1">
                     {idx % 2 !== 0 ? (
                       <AnimatedSection direction="right">
-                        <span className="text-primary font-bold text-2xl">
+                        <span className="text-primary text-2xl">
                           {item.year}
                         </span>
-                        <h4 className="text-xl font-bold mt-2 mb-3">
-                          {item.title}
-                        </h4>
-                        <p className="text-secondary">{item.desc}</p>
+                        <h4 className="text-xl mt-2 mb-3">{item.title}</h4>
+                        <p className="text-secondary-foreground">{item.desc}</p>
                       </AnimatedSection>
                     ) : (
                       <div className="hidden md:block" />
@@ -210,8 +204,8 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <h4 className="text-xl font-bold">{person.name}</h4>
-              <p className="text-primary font-medium text-sm">{person.role}</p>
+              <h4 className="text-xl ">{person.name}</h4>
+              <p className="text-primary text-sm">{person.role}</p>
             </AnimatedSection>
           ))}
         </div>
