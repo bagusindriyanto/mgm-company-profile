@@ -6,6 +6,7 @@ import {
   InteractiveTimeline,
   TimelineItem,
 } from '@/components/uitripled/interactive-timeline';
+import TimelineDemo from '@/components/timeline-demo';
 
 const teams = [
   {
@@ -160,6 +161,8 @@ export default function AboutPage() {
           <InteractiveTimeline items={timelines} />
         </div>
       </section>
+
+      <TimelineDemo />
 
       {/* Team Section */}
       <section className="container px-6 mx-auto">
