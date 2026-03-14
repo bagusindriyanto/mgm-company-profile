@@ -45,9 +45,10 @@ export default function Navbar() {
             src="/logo/mercindo-black.png"
             loading="eager"
             alt="MGM"
-            width={100}
+            width={125}
             height={100}
-            className="object-contain w-auto"
+            className="object-contain"
+            unoptimized
           />
         </Link>
 

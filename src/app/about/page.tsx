@@ -127,7 +127,8 @@ export default function AboutPage() {
               <Target size={32} /> Our Vision
             </h3>
             <p className="text-xl italic leading-relaxed opacity-90">
-              Be blessing for many people.
+              To be the Best Glove Manufacturer with Blessing for People
+              Involved.
             </p>
           </AnimatedSection>
 
@@ -144,8 +145,8 @@ export default function AboutPage() {
               <Compass size={32} /> Our Mission
             </h3>
             <p className="text-xl italic leading-relaxed opacity-90">
-              To be the Best Glove Manufacturer with Blessing for People
-              Involved.
+              Global Leadership, Integrated Supply Chain, Human Empowerment,
+              Social Impact.
             </p>
           </AnimatedSection>
         </div>

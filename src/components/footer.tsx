@@ -87,6 +87,7 @@ export function Footer() {
                   width={100}
                   height={100}
                   className="mb-4"
+                  unoptimized
                 />
               </Link>
               <p className="mb-6 max-w-md text-sm leading-relaxed text-muted-foreground">

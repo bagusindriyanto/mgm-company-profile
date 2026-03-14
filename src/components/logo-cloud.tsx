@@ -18,6 +18,7 @@ export default function LogoCloud() {
                 width={200}
                 height={100}
                 className="object-contain w-auto h-8 md:h-10"
+                unoptimized
               />
               <Image
                 src="/logo/jr286.png"
@@ -25,6 +26,7 @@ export default function LogoCloud() {
                 width={200}
                 height={100}
                 className="object-contain w-auto h-8 md:h-10"
+                unoptimized
               />
               <Image
                 src="/logo/ironclad.png"
@@ -32,6 +34,7 @@ export default function LogoCloud() {
                 width={200}
                 height={100}
                 className="object-contain w-auto h-8 md:h-10"
+                unoptimized
               />
               <Image
                 src="/logo/swany.png"
@@ -39,6 +42,7 @@ export default function LogoCloud() {
                 width={200}
                 height={100}
                 className="object-contain w-auto h-8 md:h-10"
+                unoptimized
               />
               <Image
                 src="/logo/sams-club.svg"
@@ -46,6 +50,7 @@ export default function LogoCloud() {
                 width={200}
                 height={100}
                 className="object-contain w-auto h-8 md:h-10"
+                unoptimized
               />
               <Image
                 src="/logo/almsthre.webp"
@@ -53,6 +58,7 @@ export default function LogoCloud() {
                 width={200}
                 height={100}
                 className="object-contain w-auto h-12 md:h-14"
+                unoptimized
               />
               <Image
                 src="/logo/kalibre.png"
@@ -60,6 +66,7 @@ export default function LogoCloud() {
                 width={200}
                 height={100}
                 className="object-contain w-auto h-8 md:h-10"
+                unoptimized
               />
               <Image
                 src="/logo/eiger.png"
@@ -67,6 +74,7 @@ export default function LogoCloud() {
                 width={200}
                 height={100}
                 className="object-contain w-auto h-12 md:h-14"
+                unoptimized
               />
             </InfiniteSlider>
 
