@@ -166,7 +166,7 @@ export function Footer() {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h4 className="mb-4 text-sm  uppercase">Product</h4>
+              <h3 className="mb-4 text-sm uppercase">Product</h3>
               <ul className="space-y-3">
                 {links.product.map((link) => (
                   <li key={link.name}>
@@ -190,7 +190,7 @@ export function Footer() {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h4 className="mb-4 text-sm   uppercase">Company</h4>
+              <h3 className="mb-4 text-sm uppercase">Company</h3>
               <ul className="space-y-3">
                 {links.company.map((link) => (
                   <li key={link.name}>
@@ -214,7 +214,7 @@ export function Footer() {
               viewport={{ once: true }}
               whileInView={{ opacity: 1, y: 0 }}
             >
-              <h4 className="mb-4 text-sm   uppercase">Contact Us</h4>
+              <h3 className="mb-4 text-sm uppercase">Contact Us</h3>
               <ul className="space-y-3 text-sm">
                 {links.contact.map((link) => (
                   <li

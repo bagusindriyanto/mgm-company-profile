@@ -59,14 +59,14 @@ export default function Home() {
             >
               <div className="flex gap-8 p-6 rounded-2xl border backdrop-blur-sm bg-card/60 border-border">
                 <div>
-                  <p className="text-3xl text-primary">15+</p>
+                  <p className="text-3xl font-bold text-primary">15+</p>
                   <p className="text-xs uppercase text-secondary-foreground">
                     Years Experience
                   </p>
                 </div>
                 <div className="w-px bg-border" />
                 <div>
-                  <p className="text-3xl text-primary">50k+</p>
+                  <p className="text-3xl font-bold text-primary">50k+</p>
                   <p className="text-xs uppercase text-secondary-foreground">
                     Athletes Equipped
                   </p>
@@ -170,7 +170,7 @@ export default function Home() {
                 <div className="p-5 mb-6 rounded-2xl shadow-sm bg-background">
                   {value.icon}
                 </div>
-                <h4 className="mb-4 text-xl ">{value.title}</h4>
+                <h3 className="mb-4">{value.title}</h3>
                 <p className="leading-relaxed text-secondary-foreground">
                   {value.desc}
                 </p>
