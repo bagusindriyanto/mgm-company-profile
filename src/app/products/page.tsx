@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import SectionHeader from '@/components/section-header';
 import AnimatedSection from '@/components/animated-section';
-import CarouselWithThumbs from '@/components/carousel-09';
+import CarouselWithThumbs from '@/components/carousel-items';
 
 const products = [
   {

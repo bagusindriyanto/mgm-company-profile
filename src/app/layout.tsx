@@ -5,6 +5,7 @@ import Footer from '@/components/footer';
 import NextTopLoader from 'nextjs-toploader';
 import { cn } from '@/lib/utils';
 import { Roboto, Roboto_Mono, Inter_Tight } from 'next/font/google';
+import { LenisProvider } from '@/components/providers/lenis-provider';
 
 const interTight = Inter_Tight({
   subsets: [
@@ -75,13 +76,15 @@ export default function RootLayout({
     >
       <body>
         <NextTopLoader showSpinner={false} />
-        <div className="flex flex-col">
-          <Navbar />
-          <main className="flex flex-col pt-20 min-h-screen grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <LenisProvider>
+          <div className="flex flex-col">
+            <Navbar />
+            <main className="flex flex-col pt-15 min-h-screen grow">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </LenisProvider>
       </body>
     </html>
   );

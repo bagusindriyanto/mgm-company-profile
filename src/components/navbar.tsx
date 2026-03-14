@@ -33,10 +33,17 @@ export default function Navbar() {
   });
 
   return (
-    <nav
+    <motion.nav
+      initial={false}
+      animate={{
+        paddingTop: scrolled ? '0.75rem' : '1rem',
+        paddingBottom: scrolled ? '0.75rem' : '1rem',
+        borderBottomColor: scrolled ? 'var(--border)' : 'transparent',
+        backgroundColor: scrolled ? 'var(--background)' : 'var(--background)',
+      }}
       className={cn(
-        'fixed top-0 right-0 left-0 z-50 px-6 py-4 transition-all duration-300 bg-background',
-        { 'py-3 border-b backdrop-blur-sm bg-card/70': scrolled },
+        'fixed top-0 right-0 left-0 z-50 px-6 transition-colors duration-300',
+        scrolled ? 'backdrop-blur-sm border-b' : '',
       )}
     >
       <div className="flex justify-between items-center mx-auto max-w-7xl">
@@ -69,6 +76,7 @@ export default function Navbar() {
               {pathname === link.href && (
                 <motion.div
                   layoutId="nav-underline"
+                  initial={false}
                   className="absolute -bottom-1 left-0 h-0.5 w-full bg-primary"
                   transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                 />
@@ -128,6 +136,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 }

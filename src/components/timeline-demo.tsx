@@ -1,10 +1,10 @@
-import React from "react";
-import { Timeline } from "@/components/ui/timeline";
+import React from 'react';
+import { Timeline } from '@/components/aceternity/timeline';
 
 export default function TimelineDemo() {
   const data = [
     {
-      title: "2024",
+      title: '2024',
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
@@ -44,7 +44,7 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "Early 2023",
+      title: 'Early 2023',
       content: (
         <div>
           <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
@@ -89,7 +89,7 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "Changelog",
+      title: 'Changelog',
       content: (
         <div>
           <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
