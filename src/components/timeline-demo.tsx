@@ -1,15 +1,28 @@
-import React from 'react';
 import { Timeline } from '@/components/aceternity/timeline';
 
 export default function TimelineDemo() {
   const data = [
     {
-      title: '2024',
+      title: '2012',
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Built and launched Aceternity UI and Aceternity UI Pro from scratch
+          <p className="mb-4 font-normal text-neutral-800 dark:text-neutral-200">
+            MGM was established.
           </p>
+          <ul className="mb-8 list-disc list-inside">
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              1 building
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              15 lines
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Surface area: xxx sqm
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Building area: xxx sqm
+            </li>
+          </ul>
           <div className="grid grid-cols-2 gap-4">
             <img
               src="https://assets.aceternity.com/templates/startup-1.webp"
@@ -44,17 +57,26 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: 'Early 2023',
+      title: '2013-2014',
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+          <p className="mb-4 font-normal text-neutral-800 dark:text-neutral-200">
+            MGM expanded into:
           </p>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
-          </p>
+          <ul className="mb-8 list-disc list-inside">
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              2 buildings
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              27-30 lines
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Surface area: xxx sqm
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Building area: xxx sqm
+            </li>
+          </ul>
           <div className="grid grid-cols-2 gap-4">
             <img
               src="https://assets.aceternity.com/pro/hero-sections.png"
@@ -89,29 +111,26 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: 'Changelog',
+      title: '2017-2018',
       content: (
         <div>
           <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-            Deployed 5 new components on Aceternity today
+            MGM 2 was built and expanded into:
           </p>
-          <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Card grid component
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Startup template Aceternity
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Random file upload lol
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Himesh Reshammiya Music CD
-            </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅ Salman Bhai Fan Club registrations open
-            </div>
-          </div>
+          <ul className="mb-8 list-disc list-inside">
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              4 buildings
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              55-60 lines
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Surface area: xxx sqm
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Building area: xxx sqm
+            </li>
+          </ul>
           <div className="grid grid-cols-2 gap-4">
             <img
               src="https://assets.aceternity.com/pro/hero-sections.png"

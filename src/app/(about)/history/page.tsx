@@ -1,76 +1,54 @@
-import { Compass, Target } from 'lucide-react';
 import AnimatedSection from '@/components/animated-section';
 import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
-import {
-  InteractiveTimeline,
-  TimelineItem,
-} from '@/components/uitripled/interactive-timeline';
 import TimelineDemo from '@/components/timeline-demo';
 
 const teams = [
   {
-    name: 'John Magnus',
-    role: 'CEO & Founder',
+    name: 'Eveline Kosasih',
+    role: 'President Director',
     img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=70&w=500',
   },
   {
-    name: 'Sarah Chen',
-    role: 'Head of R&D',
+    name: 'Evan Asaria Kosasih',
+    role: 'Director',
     img: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=70&w=500',
   },
   {
-    name: 'Marcus Thorne',
-    role: 'Lead Product Designer',
+    name: 'Amanda Grace Andani',
+    role: 'Merchandiser',
     img: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=70&w=500',
   },
   {
-    name: 'Elena Rossi',
-    role: 'Quality Control Manager',
+    name: 'Krisvina Silvi',
+    role: 'Purchasing',
+    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=70&w=500',
+  },
+  {
+    name: 'Johan Wahyudi',
+    role: 'HSE',
+    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=70&w=500',
+  },
+  {
+    name: 'Redy Eka Prasetya',
+    role: 'Quality',
+    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=70&w=500',
+  },
+  {
+    name: 'Ramadhani Tri Hartanto',
+    role: 'Data Center',
+    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=70&w=500',
+  },
+  {
+    name: 'Ahmudi',
+    role: 'Data Center',
     img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=70&w=500',
   },
 ];
 
-const timelines: TimelineItem[] = [
-  {
-    id: '1',
-    date: '2012',
-    title: 'The Journey Begins',
-    description: `- 1 Building\n
-      - 15 Lines\n
-      - Surface Area: xxx sqm\n
-      - Building Area: xxx sqm`,
-  },
-  {
-    id: '2',
-    date: '2013 - 2014',
-    title: 'Expansion',
-    description: `- 2 Buildings\n
-      - 27-30 Lines\n
-      - Surface Area: xxx sqm\n
-      - Building Area: xxx sqm`,
-  },
-  {
-    id: '3',
-    date: '2017 - 2018',
-    title: 'MGM 2',
-    description: `- 4 Buildings\n
-      - 55-60 Lines\n
-      - Surface Area: xxx sqm\n
-      - Building Area: xxx sqm`,
-  },
-  {
-    id: '4',
-    date: '2019',
-    title: 'Sport Center',
-    description: `- Surface Area: xxx sqm\n
-      - Building Area: xxx sqm`,
-  },
-];
-
-export default function AboutPage() {
+export default function HistoryPage() {
   return (
-    <div className="flex flex-col gap-24 pb-24">
+    <div className="flex flex-col">
       {/* Intro Section */}
       <section className="py-20 bg-muted/30">
         <div className="container px-6 mx-auto">
@@ -113,59 +91,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Vision & Mission */}
-      <section className="container px-6 mx-auto">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <AnimatedSection
-            direction="up"
-            className="overflow-hidden relative p-12 rounded-3xl bg-primary text-primary-foreground group"
-          >
-            <Target
-              size={80}
-              className="absolute -top-4 -right-4 opacity-10 transition-transform duration-500 group-hover:scale-110"
-            />
-            <h3 className="flex gap-3 items-center mb-6 text-3xl">
-              <Target size={32} /> Our Vision
-            </h3>
-            <p className="text-xl italic leading-relaxed opacity-90">
-              To be the Best Glove Manufacturer with Blessing for People
-              Involved.
-            </p>
-          </AnimatedSection>
-
-          <AnimatedSection
-            direction="up"
-            delay={0.1}
-            className="overflow-hidden relative p-12 rounded-3xl border bg-accent text-accent-foreground border-border group"
-          >
-            <Compass
-              size={80}
-              className="absolute -top-4 -right-4 opacity-10 transition-transform duration-500 group-hover:scale-110"
-            />
-            <h3 className="flex gap-3 items-center mb-6 text-3xl">
-              <Compass size={32} /> Our Mission
-            </h3>
-            <p className="text-xl italic leading-relaxed opacity-90">
-              Global Leadership, Integrated Supply Chain, Human Empowerment,
-              Social Impact.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* History Timeline */}
-      <section className="py-24 bg-muted/50">
-        <div className="container px-6 mx-auto">
-          <SectionHeader title="A Decade of Progress" centered />
-
-          <InteractiveTimeline items={timelines} />
-        </div>
-      </section>
-
+      <SectionHeader
+        title="A Decade of Progress"
+        subtitle="This is our journey."
+        centered
+        className="my-20"
+      />
       <TimelineDemo />
 
       {/* Team Section */}
-      <section className="container px-6 mx-auto">
+      <section className="container px-6 py-20 mx-auto">
         <SectionHeader
           title="Meet the Experts"
           subtitle="A diverse team of engineers, designers, and athletes working together to redefine performance."
@@ -179,13 +115,13 @@ export default function AboutPage() {
               className="cursor-pointer group"
             >
               <div className="overflow-hidden relative mb-4 rounded-2xl aspect-3/4 bg-muted">
-                <Image
+                {/* <Image
                   src={person.img}
                   alt={person.name}
                   fill
                   className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 opacity-0 transition-opacity bg-primary/20 group-hover:opacity-100" />
+                <div className="absolute inset-0 opacity-0 transition-opacity bg-primary/20 group-hover:opacity-100" /> */}
               </div>
               <h3 className="text-xl">{person.name}</h3>
               <p className="text-sm text-primary">{person.role}</p>

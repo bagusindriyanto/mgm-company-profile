@@ -5,7 +5,7 @@ import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
 import LogoCloud from '@/components/logo-cloud';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="flex flex-col gap-20 pb-20">
       {/* Hero Section */}
