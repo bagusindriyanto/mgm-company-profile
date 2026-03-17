@@ -6,7 +6,7 @@ export default function LogoCloud() {
   return (
     <section className="overflow-hidden py-16 bg-background">
       <div className="relative px-6 m-auto max-w-7xl group">
-        <div className="**:fill-foreground relative py-6 md:w-[calc(100%-11rem)]">
+        <div className="**:fill-foreground relative py-6 md:w-[calc(100%-11rem)] mx-auto">
           <InfiniteSlider speedOnHover={20} speed={40} gap={110}>
             <Image
               src="/logo/decathlon.png"

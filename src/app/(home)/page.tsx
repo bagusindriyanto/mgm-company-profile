@@ -78,6 +78,12 @@ export default function HomePage() {
       </section>
 
       {/* Logo Cloud */}
+      <SectionHeader
+        title="Supported by The Best"
+        subtitle="Meet our partners."
+        centered
+        className="mb-0"
+      />
       <LogoCloud />
 
       {/* Featured Products Showcase */}
