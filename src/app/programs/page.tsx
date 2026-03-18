@@ -1,11 +1,3 @@
-import {
-  FlaskConical,
-  Leaf,
-  Users2,
-  Rocket,
-  Globe2,
-  Heart,
-} from 'lucide-react';
 import AnimatedSection from '@/components/animated-section';
 import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
@@ -13,87 +5,120 @@ import Image from 'next/image';
 const programs = [
   {
     title: 'Eco-Tech Innovation',
-    tag: 'Sustainability',
-    desc: 'Developing next-generation fabrics from recycled marine plastics and biodegradable fibers. Our goal is to be 100% sustainable by 2030.',
-    icon: <Leaf className="text-emerald-500" size={40} />,
-    color: 'bg-emerald-500/10',
+    category: 'Sustainability',
+    status: 'Active',
+    image:
+      'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800',
+    span: 'md:col-span-2 md:row-span-2',
   },
   {
     title: 'Athlete Synergy Lab',
-    tag: 'R&D',
-    desc: 'A collaborative program where professional athletes work directly with our engineers to test and refine prototypes in real-world conditions.',
-    icon: <FlaskConical className="text-blue-500" size={40} />,
-    color: 'bg-blue-500/10',
+    category: 'R&D',
+    status: 'Active',
+    image:
+      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800',
+    span: 'md:col-span-1 md:row-span-1',
   },
   {
     title: 'Future Champions',
-    tag: 'Community',
-    desc: 'Providing high-quality sports gear to underprivileged youth sports programs across Southeast Asia to foster the next generation of talent.',
-    icon: <Rocket className="text-orange-500" size={40} />,
-    color: 'bg-orange-500/10',
+    category: 'Community',
+    status: 'Active',
+    image:
+      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=800',
+    span: 'md:col-span-1 md:row-span-1',
   },
   {
     title: 'Global Supply Integrity',
-    tag: 'Logistics',
-    desc: 'Implementing blockchain-based tracking for our raw materials to ensure ethical sourcing and 100% transparency in our supply chain.',
-    icon: <Globe2 className="text-purple-500" size={40} />,
-    color: 'bg-purple-500/10',
+    category: 'Logistics',
+    status: 'On Hold',
+    image:
+      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800',
+    span: 'md:col-span-1 md:row-span-1',
   },
   {
     title: 'The Glove Project',
-    tag: 'Innovation',
-    desc: 'Researching micro-ventilated textiles that offer military-grade protection while maintaining the breathability of lightweight mesh.',
-    icon: <Users2 className="text-cyan-500" size={40} />,
-    color: 'bg-cyan-500/10',
+    category: 'Innovation',
+    status: 'Active',
+    image:
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
+    span: 'md:col-span-2 md:row-span-1',
   },
   {
     title: 'MGM Wellness Drive',
-    tag: 'Employees',
-    desc: 'A bi-annual internal program promoting physical and mental well-being for our 500+ manufacturing staff through workshops and sports events.',
-    icon: <Heart className="text-rose-500" size={40} />,
-    color: 'bg-rose-500/10',
+    category: 'Employees',
+    status: 'Upcoming',
+    image:
+      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=800',
+    span: 'md:col-span-1 md:row-span-1',
   },
 ];
+
+const statusColor: Record<string, string> = {
+  Active: 'bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]',
+  'On Hold': 'bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.5)]',
+  Upcoming: 'bg-sky-500 shadow-[0_0_10px_rgba(14,165,233,0.5)]',
+};
 
 export default function ProgramsPage() {
   return (
     <div className="flex flex-col gap-20 pb-24">
-      <section className="bg-primary/5 py-24">
-        <div className="container mx-auto px-6">
+      {/* Header */}
+      <section className="py-24 bg-primary/5">
+        <div className="container px-6 mx-auto">
           <SectionHeader
             title="Ongoing Programs"
             subtitle="Explore the initiatives that drive our innovation, sustain our planet, and support our community."
+            centered
           />
         </div>
       </section>
 
-      <section className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* ── Bento Grid ─────────────────────────────────── */}
+      <section className="container px-6 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[260px] gap-4">
           {programs.map((program, idx) => (
             <AnimatedSection
               key={idx}
-              delay={idx * 0.1}
-              className="flex h-full"
+              delay={idx * 0.08}
+              className={`${program.span} group`}
             >
-              <div className="bg-card border border-border rounded-3xl p-8 flex flex-col h-full hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all group">
-                <div
-                  className={`w-16 h-16 rounded-2xl ${program.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}
-                >
-                  {program.icon}
+              <div className="overflow-hidden relative w-full h-full rounded-3xl cursor-pointer">
+                {/* Background image */}
+                <Image
+                  fill
+                  src={program.image}
+                  alt={program.title}
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 to-transparent bg-linear-to-t from-black/80 via-black/30" />
+
+                {/* Content */}
+                <div className="flex relative z-10 flex-col justify-between p-6 h-full">
+                  {/* Top row: category + status */}
+                  <div className="flex justify-between items-center">
+                    <span className="px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded-full backdrop-blur-md bg-white/15">
+                      {program.category}
+                    </span>
+                    <div className="flex gap-2 items-center px-3 py-1 rounded-full backdrop-blur-md bg-white/15">
+                      <div
+                        className={`h-2.5 w-2.5 rounded-full animate-pulse ${statusColor[program.status] ?? 'bg-gray-400'}`}
+                      />
+                      <span className="text-[11px] font-medium text-white">
+                        {program.status}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Bottom: title */}
+                  <h3 className="text-xl font-bold text-white drop-shadow-lg md:text-2xl">
+                    {program.title}
+                  </h3>
                 </div>
-                <span className="text-xs uppercase  text-primary mb-2">
-                  {program.tag}
-                </span>
-                <h3 className="text-2xl mb-4">{program.title}</h3>
-                <p className="text-secondary-foreground leading-relaxed grow">
-                  {program.desc}
-                </p>
-                <div className="mt-8 pt-8 border-t border-border flex items-center justify-between">
-                  <span className="text-sm text-foreground">
-                    Status: Active
-                  </span>
-                  <div className="w-3 h-3 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)] animate-pulse" />
-                </div>
+
+                {/* Hover ring */}
+                <div className="absolute inset-0 rounded-3xl ring-1 transition-all duration-500 pointer-events-none ring-white/10 group-hover:ring-primary/40" />
               </div>
             </AnimatedSection>
           ))}
@@ -101,7 +126,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* Hero CTA for Programs */}
-      <section className="container mx-auto px-6">
+      <section className="container px-6 mx-auto">
         <AnimatedSection
           direction="up"
           className="relative h-[400px] rounded-3xl overflow-hidden bg-foreground"
@@ -112,16 +137,16 @@ export default function ProgramsPage() {
             className="object-cover opacity-40"
             alt="Want to Partner with Us"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
-          <div className="relative h-full flex flex-col items-center justify-center p-8 text-center">
-            <h2 className="text-3xl font-extrabold text-white mb-6 md:text-5xl">
+          <div className="absolute inset-0 from-black to-transparent bg-linear-to-t via-black/40" />
+          <div className="flex relative flex-col justify-center items-center p-8 h-full text-center">
+            <h2 className="mb-6 text-3xl font-extrabold text-white md:text-5xl">
               Want to Partner With Us?
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mb-10 leading-relaxed">
+            <p className="mb-10 max-w-2xl text-lg leading-relaxed text-gray-300">
               We are always looking for innovative tech startups and
               sustainability partners to collaborate on our future programs.
             </p>
-            <button className="rounded-full bg-primary px-10 py-4 text-lg text-white hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/20">
+            <button className="px-10 py-4 text-lg text-white rounded-full shadow-xl transition-all bg-primary hover:bg-primary/90 hover:scale-105 active:scale-95 shadow-primary/20">
               Submit Proposal
             </button>
           </div>

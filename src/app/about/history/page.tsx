@@ -107,7 +107,7 @@ export default function HistoryPage() {
           subtitle="A diverse team of engineers, designers, and athletes working together to redefine performance."
           centered
         />
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           {teams.map((person, idx) => (
             <AnimatedSection
               key={idx}

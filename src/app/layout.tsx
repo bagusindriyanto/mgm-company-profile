@@ -79,7 +79,7 @@ export default function RootLayout({
         <LenisProvider>
           <div className="flex flex-col">
             <Navbar />
-            <main className="flex flex-col pt-15 min-h-screen grow">
+            <main className="flex flex-col min-h-screen pt-15 grow overflow-x-clip">
               {children}
             </main>
             <Footer />

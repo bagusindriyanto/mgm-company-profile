@@ -24,10 +24,10 @@ export default function TimelineDemo() {
             </li>
           </ul>
           <div className="grid grid-cols-2 gap-4">
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
             {/* <img
               src="https://assets.aceternity.com/templates/startup-1.webp"
               alt="startup template"
@@ -82,10 +82,10 @@ export default function TimelineDemo() {
             </li>
           </ul>
           <div className="grid grid-cols-2 gap-4">
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
             {/* <img
               src="https://assets.aceternity.com/pro/hero-sections.png"
               alt="hero template"
@@ -140,10 +140,10 @@ export default function TimelineDemo() {
             </li>
           </ul>
           <div className="grid grid-cols-2 gap-4">
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
-            <div className="h-20 w-full bg-zinc-700 rounded-lg md:h-44 lg:h-60 shadow-md"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
             {/* <img
               src="https://assets.aceternity.com/pro/hero-sections.png"
               alt="hero template"
@@ -172,6 +172,36 @@ export default function TimelineDemo() {
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             /> */}
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: '2019',
+      content: (
+        <div>
+          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+            MGM Sport was built and expanded into:
+          </p>
+          <ul className="mb-8 list-disc list-inside">
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              4 buildings
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              55-60 lines
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Surface area: xxx sqm
+            </li>
+            <li className="text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              Building area: xxx sqm
+            </li>
+          </ul>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
+            <div className="w-full h-20 rounded-lg shadow-md bg-zinc-700 md:h-44 lg:h-60"></div>
           </div>
         </div>
       ),

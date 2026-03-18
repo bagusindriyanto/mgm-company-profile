@@ -83,7 +83,7 @@ export function Footer() {
               <Link href="/">
                 <Image
                   src="/logo/mercindo-black.png"
-                  alt="MGM"
+                  alt="MGM Logo"
                   width={100}
                   height={100}
                   className="mb-4"
