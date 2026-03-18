@@ -34,7 +34,6 @@ const navLinks = [
   { name: 'Programs', href: '/programs' },
   { name: 'Products', href: '/products' },
   { name: 'Achievements', href: '/achievements' },
-  { name: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -58,11 +57,11 @@ export default function Navbar() {
         backgroundColor: scrolled ? 'var(--background)' : 'var(--background)',
       }}
       className={cn(
-        'fixed top-0 right-0 left-0 z-50 px-6 transition-colors duration-300',
-        scrolled ? 'backdrop-blur-sm border-b' : '',
+        'fixed top-0 right-0 left-0 z-50 transition-colors duration-300',
+        scrolled ? 'border-b backdrop-blur-sm' : '',
       )}
     >
-      <div className="flex justify-between items-center mx-auto max-w-7xl">
+      <div className="container flex justify-between items-center px-6 mx-auto">
         <Link href="/" className="flex gap-2 items-center group">
           <Image
             src="/logo/mercindo-black.png"
@@ -94,7 +93,7 @@ export default function Navbar() {
                         {link.name}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
-                        <ul className="grid min-w-30 gap-1">
+                        <ul className="grid gap-1 min-w-30">
                           {link.dropdown.map((item) => (
                             <li key={item.name}>
                               <NavigationMenuLink
@@ -149,7 +148,7 @@ export default function Navbar() {
             href="/contact"
             className="px-6 py-2 ml-4 text-sm rounded-full transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20 active:scale-95"
           >
-            Get a Quote
+            Contact Us
           </Link>
         </div>
 
@@ -171,7 +170,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden md:hidden"
           >
-            <div className="flex flex-col gap-2 pt-4 pb-6">
+            <div className="container flex flex-col gap-2 px-6 pt-4 pb-6 mx-auto">
               {navLinks.map((link) => (
                 <div key={link.name} className="flex flex-col">
                   {link.dropdown ? (
@@ -204,7 +203,7 @@ export default function Navbar() {
                           height: openDropdown === link.name ? 'auto' : 0,
                           opacity: openDropdown === link.name ? 1 : 0,
                         }}
-                        className="overflow-hidden flex flex-col gap-2 pl-4 border-l border-primary/20"
+                        className="flex overflow-hidden flex-col gap-2 pl-4 border-l border-primary/20"
                       >
                         {link.dropdown.map((item) => (
                           <Link
@@ -244,7 +243,7 @@ export default function Navbar() {
                 className="py-3 mt-4 w-full text-sm font-medium text-center rounded-lg bg-primary text-primary-foreground"
                 onClick={() => setIsOpen(false)}
               >
-                Get a Quote
+                Contact Us
               </Link>
             </div>
           </motion.div>

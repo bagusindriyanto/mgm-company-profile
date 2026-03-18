@@ -34,13 +34,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/programs"
+                href="/products"
                 className="px-8 py-4 text-lg rounded-full transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105"
               >
-                View Programs
+                Our Products
               </Link>
               <Link
-                href="/about"
+                href="/history"
                 className="px-8 py-4 text-lg rounded-full border-2 backdrop-blur-sm transition-all border-primary/20 bg-background/50 text-foreground hover:bg-primary/5 hover:border-primary"
               >
                 Our Story
@@ -59,7 +59,7 @@ export default function HomePage() {
             >
               <div className="flex gap-8 p-6 rounded-2xl border backdrop-blur-sm bg-card/60 border-border">
                 <div>
-                  <p className="text-3xl font-bold text-primary">15+</p>
+                  <p className="text-3xl font-bold text-primary">14+</p>
                   <p className="text-xs uppercase text-secondary-foreground">
                     Years Experience
                   </p>
@@ -78,13 +78,14 @@ export default function HomePage() {
       </section>
 
       {/* Logo Cloud */}
-      <SectionHeader
-        title="Supported by The Best"
-        subtitle="Meet our partners."
-        centered
-        className="mb-0"
-      />
-      <LogoCloud />
+      <div className="container px-6 mx-auto mb-20">
+        <SectionHeader
+          title="Supported by The Best"
+          subtitle="Meet our partners."
+          centered
+        />
+        <LogoCloud />
+      </div>
 
       {/* Featured Products Showcase */}
       <section className="container px-6 mx-auto">
@@ -100,7 +101,7 @@ export default function HomePage() {
             className="group relative h-[400px] overflow-hidden rounded-3xl bg-muted"
           >
             <Image
-              src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=70&w=1000"
+              src="https://images.unsplash.com/photo-1634852836003-c0aa5b67d243?q=80&w=870&auto=format&fit=crop"
               alt="Technical Gloves"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -125,7 +126,7 @@ export default function HomePage() {
             className="group relative h-[400px] overflow-hidden rounded-3xl bg-muted"
           >
             <Image
-              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=70&w=1000"
+              src="https://images.unsplash.com/flagged/photo-1556746834-1cb5b8fabd54?q=80&w=872&auto=format&fit=crop"
               alt="Aero-Running Apparel"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -148,7 +149,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Us / Values */}
-      <section className="py-24 bg-muted/50">
+      <section className="py-24 bg-muted">
         <div className="container px-6 mx-auto">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
             {[
