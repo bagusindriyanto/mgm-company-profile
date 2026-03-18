@@ -29,12 +29,12 @@ const navLinks = [
     dropdown: [
       {
         name: 'Profile',
-        href: '/profile',
+        href: '/about/profile',
         description: 'Learn about our company',
       },
       {
         name: 'History',
-        href: '/history',
+        href: '/about/history',
         description: 'Our journey through the years',
       },
     ],
