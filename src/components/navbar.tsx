@@ -107,7 +107,7 @@ export default function Navbar() {
                             className={cn(
                               'transition-all px-3.5 py-2 duration-200 font-heading text-sm font-medium tracking-wide rounded-full hover:bg-transparent data-popup-open:hover:bg-transparent data-open:hover:bg-transparent bg-transparent',
                               isActive(link.href)
-                                ? 'text-primary'
+                                ? 'text-primary bg-primary/10'
                                 : 'text-foreground/70 hover:text-foreground',
                             )}
                           >
