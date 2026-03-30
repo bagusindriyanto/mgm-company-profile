@@ -1,25 +1,26 @@
 import AnimatedSection from '@/components/animated-section';
-import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 const programs = [
   {
-    title: 'CSR (Corporate Social Responsibility)',
+    title: 'MGM Peduli - Penyerahan Bingkisan Lebaran kepada Warga Desa Samban',
     description:
       'Community development programs that empower local communities and promote social well-being.',
     category: 'Community',
     status: 'Active',
-    image: '/program/csr/1.webp',
+    image: '/program/mgm-peduli/1.webp',
+    slug: 'penyerahan-bingkisan-lebaran-kepada-warga-desa-samban',
   },
   {
-    title: 'Donor Darah',
+    title: 'MGM Peduli - Bantuan Pembangunan Lapangan Voli Desa Samban',
     description:
-      'Regular blood donation drives organized in collaboration with the Indonesian Red Cross.',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, eos.',
     category: 'Community',
     status: 'Active',
-    image: '/program/csr/2.webp',
+    image: '/program/pembangunan-voli/1.jpeg',
+    slug: 'bantuan-pembangunan-lapangan-voli-desa-samban',
   },
   {
     title: 'Environment Management System',
@@ -126,62 +127,64 @@ export default function ProgramsPage() {
             };
             return (
               <AnimatedSection key={idx} delay={idx * 0.08}>
-                <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
-                  {/* Image container */}
-                  <div className="relative aspect-[4/3] w-full overflow-hidden">
-                    <Image
-                      fill
-                      src={program.image}
-                      alt={program.title}
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
+                <Link href={`/programs/${program.slug}`}>
+                  <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
+                    {/* Image container */}
+                    <div className="relative aspect-[4/3] w-full overflow-hidden">
+                      <Image
+                        fill
+                        src={program.image}
+                        alt={program.title}
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
 
-                    {/* Arrow icon — top right */}
-                    <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 group-hover:bg-primary group-hover:shadow-primary/25">
-                      <ArrowUpRight className="h-5 w-5 text-foreground transition-colors duration-300 group-hover:text-white" />
-                    </div>
+                      {/* Arrow icon — top right */}
+                      <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white shadow-lg transition duration-300 opacity-0 group-hover:opacity-100">
+                        <ArrowUpRight className="h-5 w-5 text-primary transition-transform duration-600 rotate-45 group-hover:rotate-0" />
+                      </div>
 
-                    {/* Status badge — bottom left */}
-                    <div className="absolute bottom-4 left-4">
-                      <span
-                        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold backdrop-blur-sm ${status.bg} ${status.color} border border-current/10`}
-                      >
-                        <span className="relative flex h-2 w-2">
-                          {program.status === 'Active' && (
-                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-                          )}
-                          <span
-                            className={`relative inline-flex h-2 w-2 rounded-full ${
-                              program.status === 'Active'
-                                ? 'bg-emerald-500'
-                                : program.status === 'On Hold'
-                                  ? 'bg-amber-500'
-                                  : 'bg-sky-500'
-                            }`}
-                          />
+                      {/* Status badge — bottom left */}
+                      <div className="absolute bottom-4 left-4">
+                        <span
+                          className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold backdrop-blur-sm ${status.bg} ${status.color} border border-current/10`}
+                        >
+                          <span className="relative flex h-2 w-2">
+                            {program.status === 'Active' && (
+                              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
+                            )}
+                            <span
+                              className={`relative inline-flex h-2 w-2 rounded-full ${
+                                program.status === 'Active'
+                                  ? 'bg-emerald-500'
+                                  : program.status === 'On Hold'
+                                    ? 'bg-amber-500'
+                                    : 'bg-sky-500'
+                              }`}
+                            />
+                          </span>
+                          {program.status}
                         </span>
-                        {program.status}
+                      </div>
+                    </div>
+
+                    {/* Text content */}
+                    <div className="flex flex-1 flex-col p-6">
+                      {/* Category tag */}
+                      <span className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+                        {program.category}
                       </span>
+
+                      <h3 className="mb-2 text-xl font-bold leading-snug">
+                        {program.title}
+                      </h3>
+
+                      <p className="mt-auto text-sm leading-relaxed text-muted-foreground">
+                        {program.description}
+                      </p>
                     </div>
                   </div>
-
-                  {/* Text content */}
-                  <div className="flex flex-1 flex-col p-6">
-                    {/* Category tag */}
-                    <span className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
-                      {program.category}
-                    </span>
-
-                    <h3 className="mb-2 text-xl font-bold leading-snug text-foreground transition-colors duration-300 group-hover:text-primary">
-                      {program.title}
-                    </h3>
-
-                    <p className="mt-auto text-sm leading-relaxed text-muted-foreground">
-                      {program.description}
-                    </p>
-                  </div>
-                </div>
+                </Link>
               </AnimatedSection>
             );
           })}
