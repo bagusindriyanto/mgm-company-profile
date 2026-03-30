@@ -35,13 +35,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/products"
-                className="px-8 py-4 text-lg rounded-full transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105"
+                className="px-8 py-4 text-lg rounded-full transition bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105"
               >
                 Our Products
               </Link>
               <Link
                 href="/history"
-                className="px-8 py-4 text-lg rounded-full border-2 backdrop-blur-sm transition-all border-primary/20 bg-background/50 text-foreground hover:bg-primary/5 hover:border-primary"
+                className="px-8 py-4 text-lg rounded-full border-2 backdrop-blur-sm transition border-primary/20 bg-background/50 text-foreground hover:bg-primary/5 hover:border-primary"
               >
                 Our Story
               </Link>
@@ -207,7 +207,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex justify-center items-center px-10 py-4 text-lg bg-white rounded-full shadow-xl transition-all text-primary hover:bg-gray-100 hover:scale-105 active:scale-95"
+              className="inline-flex justify-center items-center px-10 py-4 text-lg bg-white rounded-full shadow-xl transition text-primary hover:bg-gray-100 hover:scale-105 active:scale-95"
             >
               Contact Our Experts
             </Link>

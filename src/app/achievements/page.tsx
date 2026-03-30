@@ -92,7 +92,7 @@ export default function AchievementsPage() {
                 delay={idx * 0.1}
                 className="bg-card border border-border rounded-2xl p-6 flex gap-6 items-start hover:border-primary/50 transition-colors group"
               >
-                <div className="bg-muted text-primary px-4 py-2 rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all">
+                <div className="bg-muted text-primary px-4 py-2 rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition">
                   {award.year}
                 </div>
                 <div>
