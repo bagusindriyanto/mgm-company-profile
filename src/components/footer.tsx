@@ -56,7 +56,7 @@ const social: Social = {
   linkedin: 'https://linkedin.com',
 };
 
-export function Footer() {
+function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (

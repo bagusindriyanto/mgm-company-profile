@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -9,7 +9,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from 'motion/react';
-import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
+import { ChevronDown, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import {
@@ -20,6 +20,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
+import { MenuIcon, MenuIconHandle } from './ui/icons/menu';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -46,6 +47,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuIconRef = useRef<MenuIconHandle>(null);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
@@ -60,26 +62,41 @@ export default function Navbar() {
     return pathname === href || pathname.startsWith(href);
   };
 
+  const handleClick = () => {
+    if (isOpen) {
+      setIsOpen(false);
+      menuIconRef.current?.stopAnimation();
+    } else {
+      setIsOpen(true);
+      menuIconRef.current?.startAnimation();
+    }
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+    menuIconRef.current?.stopAnimation();
+  };
+
   return (
     <>
       <motion.nav
         className={cn(
           'fixed top-0 z-50 w-full duration-500 ease-out transition-[padding]',
-          scrolled ? 'px-4 pt-3 md:px-8' : 'px-0 pt-0',
+          scrolled ? 'md:pt-3 md:px-8' : 'px-0 pt-0',
         )}
       >
         <motion.div
           className={cn(
-            'transition-all duration-500 ease-out',
+            'transition-all duration-500 ease-out mx-auto',
             scrolled
-              ? 'mx-auto max-w-5xl rounded-2xl border shadow-lg backdrop-blur-lg border-border/50 bg-background/70'
-              : 'mx-auto max-w-full backdrop-blur-sm bg-background/95',
+              ? 'max-w-5xl md:rounded-2xl shadow-lg bg-white md:backdrop-blur-lg md:bg-background/70'
+              : 'max-w-full bg-white',
           )}
         >
           <div
             className={cn(
-              'flex justify-between items-center transition-all duration-500',
-              scrolled ? 'px-5 py-2.5' : 'container px-6 mx-auto py-3.5',
+              'flex justify-between items-center px-6 py-2.5 transition-all duration-500',
+              !scrolled && 'container mx-auto',
             )}
           >
             {/* Logo */}
@@ -88,8 +105,8 @@ export default function Navbar() {
                 src="/logo/mercindo-black.png"
                 loading="eager"
                 alt="MGM Logo"
-                width={scrolled ? 100 : 125}
-                height={scrolled ? 80 : 100}
+                width={125}
+                height={100}
                 className="object-contain transition-all duration-500"
                 unoptimized
               />
@@ -188,35 +205,13 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Toggle */}
-            <motion.button
+            <button
               className="flex justify-center items-center w-10 h-10 rounded-xl transition-colors text-foreground md:hidden hover:bg-muted"
-              onClick={() => setIsOpen(!isOpen)}
-              whileTap={{ scale: 0.9 }}
+              type="button"
+              onClick={handleClick}
             >
-              <AnimatePresence mode="wait" initial={false}>
-                {isOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.15 }}
-                  >
-                    <X size={22} />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="open"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.15 }}
-                  >
-                    <Menu size={22} />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.button>
+              <MenuIcon ref={menuIconRef} />
+            </button>
           </div>
         </motion.div>
       </motion.nav>
@@ -230,8 +225,8 @@ export default function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 md:hidden"
-              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 z-40 bg-black/40 md:hidden"
+              onClick={handleClose}
             />
 
             {/* Floating menu panel */}
@@ -240,12 +235,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 10, scale: 1 }}
               exit={{ opacity: 0, y: 0, scale: 0.97 }}
               transition={{ type: 'spring', damping: 25, stiffness: 350 }}
-              className={cn(
-                'fixed z-50 md:hidden',
-                scrolled
-                  ? 'right-4 left-4 top-[68px] md:left-8 md:right-8'
-                  : 'right-4 left-4 top-[64px] md:left-8 md:right-8',
-              )}
+              className={cn('fixed z-50 md:hidden right-3 left-3 top-[56px]')}
             >
               <div
                 className={cn(
@@ -323,7 +313,7 @@ export default function Navbar() {
                                           ? 'text-primary bg-primary/5'
                                           : 'text-foreground/70 hover:text-foreground hover:bg-muted/50',
                                       )}
-                                      onClick={() => setIsOpen(false)}
+                                      onClick={handleClose}
                                     >
                                       <span className="text-sm font-medium font-heading">
                                         {item.name}
@@ -349,7 +339,7 @@ export default function Navbar() {
                               ? 'text-primary bg-primary/5'
                               : 'text-foreground hover:bg-muted/50',
                           )}
-                          onClick={() => setIsOpen(false)}
+                          onClick={handleClose}
                         >
                           {isActive(link.href) && (
                             <div className="size-1.5 rounded-full bg-primary mr-3 shrink-0" />
@@ -376,7 +366,7 @@ export default function Navbar() {
                         'bg-primary text-primary-foreground text-sm font-medium font-heading tracking-wide',
                         'transition-all duration-300 hover:shadow-md hover:shadow-primary/25 hover:scale-[1.02] active:scale-[0.98]',
                       )}
-                      onClick={() => setIsOpen(false)}
+                      onClick={handleClose}
                     >
                       {/* Shimmer effect */}
                       <span className="absolute inset-0 from-transparent to-transparent transition-transform duration-700 -translate-x-full group-hover:translate-x-full bg-linear-to-r via-white/20" />

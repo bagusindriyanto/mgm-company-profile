@@ -2,6 +2,7 @@ import Image from 'next/image';
 import SectionHeader from '@/components/section-header';
 import AnimatedSection from '@/components/animated-section';
 import CarouselWithThumbs from '@/components/carousel-items';
+import Link from 'next/link';
 
 const products = [
   {
@@ -150,12 +151,12 @@ export default function ProductsPage() {
             We provide specialized bulk manufacturing and custom branding for
             sports teams, athletic facilities, and corporate partners.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-flex justify-center items-center px-8 py-3 text-sm rounded-full shadow-md transition-all bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 active:scale-95"
           >
             Contact Sales Team
-          </a>
+          </Link>
         </AnimatedSection>
       </section>
     </div>
