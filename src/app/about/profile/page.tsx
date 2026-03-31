@@ -10,7 +10,7 @@ const sections: Section[] = [
       'To be the Best Glove Manufacturer with Blessing for People Involved',
     description:
       'Menjadi Perusahaan Sarung Tangan Terbaik dengan Berkah bagi Semua Pihak yang Terlibat.',
-    image: '/ilustration/1.jpeg',
+    image: '/images/ilustration/1.jpeg',
     layout: 'centered',
   },
   {
@@ -18,7 +18,7 @@ const sections: Section[] = [
     title: 'Our Strategic Commitment to Excellence and Impact',
     description:
       '1. Global Leadership\n2. Integrated Supply Chain\n3. Human Empowerment\n4. Social Impact',
-    image: '/ilustration/2.jpeg',
+    image: '/images/ilustration/2.jpeg',
     layout: 'split',
   },
   {
@@ -26,7 +26,7 @@ const sections: Section[] = [
     title: 'Business Philosophy of MGM',
     description:
       '1. Quality\n2. Innovation\n3. Teamwork\n4. Customer Satisfaction',
-    image: '/ilustration/4.jpeg',
+    image: '/images/ilustration/4.jpeg',
     layout: 'split',
   },
 ];

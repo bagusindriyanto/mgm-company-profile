@@ -127,7 +127,7 @@ export default function ProductsPage() {
               className="overflow-hidden relative w-full bg-white rounded-2xl shadow-sm transition-all duration-300 group aspect-square hover:shadow-xl"
             >
               <Image
-                src={`/product/${i + 1}.jpeg`}
+                src={`/images/products/${i + 1}.jpeg`}
                 alt={`Product Gallery ${i + 1}`}
                 fill
                 className="object-contain p-4 transition-transform duration-700 hover:scale-110"

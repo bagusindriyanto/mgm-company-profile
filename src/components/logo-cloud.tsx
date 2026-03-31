@@ -7,7 +7,7 @@ export default function LogoCloud() {
     <div className="**:fill-foreground p-2 overflow-hidden relative">
       <InfiniteSlider speedOnHover={15} speed={40} gap={110}>
         <Image
-          src="/logo/decathlon.png"
+          src="/images/logo/decathlon.png"
           alt="Decathlon"
           width={200}
           height={100}
@@ -15,7 +15,7 @@ export default function LogoCloud() {
           unoptimized
         />
         <Image
-          src="/logo/jr286.png"
+          src="/images/logo/jr286.png"
           alt="JR286"
           width={200}
           height={100}
@@ -23,7 +23,7 @@ export default function LogoCloud() {
           unoptimized
         />
         <Image
-          src="/logo/ironclad.png"
+          src="/images/logo/ironclad.png"
           alt="Ironclad"
           width={200}
           height={100}
@@ -31,7 +31,7 @@ export default function LogoCloud() {
           unoptimized
         />
         <Image
-          src="/logo/swany.png"
+          src="/images/logo/swany.png"
           alt="Swany"
           width={200}
           height={100}
@@ -39,7 +39,7 @@ export default function LogoCloud() {
           unoptimized
         />
         <Image
-          src="/logo/sams-club.svg"
+          src="/images/logo/sams-club.svg"
           alt="Sam's Club"
           width={200}
           height={100}
@@ -47,7 +47,7 @@ export default function LogoCloud() {
           unoptimized
         />
         <Image
-          src="/logo/almsthre.webp"
+          src="/images/logo/almsthre.webp"
           alt="Almsthre"
           width={200}
           height={100}
@@ -55,7 +55,7 @@ export default function LogoCloud() {
           unoptimized
         />
         <Image
-          src="/logo/kalibre.png"
+          src="/images/logo/kalibre.png"
           alt="Kalibre"
           width={200}
           height={100}
@@ -63,7 +63,7 @@ export default function LogoCloud() {
           unoptimized
         />
         <Image
-          src="/logo/eiger.png"
+          src="/images/logo/eiger.png"
           alt="Eiger"
           width={200}
           height={100}

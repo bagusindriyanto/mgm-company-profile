@@ -102,7 +102,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex relative gap-2 items-center group">
               <Image
-                src="/logo/mercindo-black.png"
+                src="/images/logo/mercindo-black.png"
                 loading="eager"
                 alt="MGM Logo"
                 width={125}

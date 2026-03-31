@@ -19,7 +19,7 @@ export default function HomePage() {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover md:left-auto md:right-[5%] md:w-[50%] lg:w-[40%] xl:w-[35%]"
         >
-          <source src="/video/rungloves-animated.webm" type="video/webm" />
+          <source src="/videos/rungloves-animated.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
         <div className="container relative z-20 px-6 mx-auto">

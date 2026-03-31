@@ -23,7 +23,7 @@ const products = [
     desc: 'In 20 years, there could be more plastic in our oceans than fish.',
     subdesc:
       'Plastic pollution injures more than 100.000 marine animals every year. It takes around 450 years for one plastic bottle to decompose.',
-    image: '/product/1.jpeg',
+    image: '/images/products/1.jpeg',
     bgColor: 'bg-[#f3ede4]',
     archColor: 'bg-linear-to-b from-[#64C8C8] to-[#F1DEB9]',
   },
@@ -34,7 +34,7 @@ const products = [
     desc: "The area affected by desertification is approx 11 times India's size.",
     subdesc:
       'Plastic pollution injures more than 100.000 marine animals every year. It takes around 450 years for one plastic bottle to decompose.',
-    image: '/product/2.jpeg',
+    image: '/images/products/2.jpeg',
     bgColor: 'bg-[#F3CE92]',
     archColor: 'bg-linear-to-b from-[#E7A553] to-[#7B5934]',
   },
@@ -45,7 +45,7 @@ const products = [
     desc: 'Glaciers are melting at an unprecedented rate.',
     subdesc:
       'Sea levels are rising, threatening coastal communities and habitats. We need to act now.',
-    image: '/product/3.jpeg',
+    image: '/images/products/3.jpeg',
     bgColor: 'bg-[#E6F0F2]',
     archColor: 'bg-linear-to-b from-[#A5D1D6] to-[#CBD8DB]',
   },
@@ -56,7 +56,7 @@ const products = [
     desc: 'Protecting the wonders of the night sky.',
     subdesc:
       'Light pollution affects nocturnal ecosystems and our ability to observe the universe.',
-    image: '/product/4.jpeg',
+    image: '/images/products/4.jpeg',
     bgColor: 'bg-[#EAEAEA]',
     archColor: 'bg-linear-to-b from-[#3A3A3A] to-[#8C8C8C]',
   },

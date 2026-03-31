@@ -23,7 +23,7 @@ import { Badge } from './ui/badge';
 
 const images = Array.from({ length: 17 }).map((_, i) => ({
   id: `image-${i + 1}`,
-  src: `/product/${i + 1}.jpeg`,
+  src: `/images/products/${i + 1}.jpeg`,
   alt: `Product Gallery ${i + 1}`,
 }));
 

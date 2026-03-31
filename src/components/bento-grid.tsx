@@ -7,7 +7,7 @@ const programs = [
     title: 'CSR (Corporate Social Responsibility)',
     category: 'Community',
     status: 'Active',
-    image: '/program/csr/1.webp',
+    image: '/images/programs/mgm-peduli/1.webp',
     span: 'md:col-span-2 md:row-span-2',
   },
   {

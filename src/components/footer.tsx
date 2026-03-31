@@ -82,7 +82,7 @@ function Footer() {
             >
               <Link href="/">
                 <Image
-                  src="/logo/mercindo-black.png"
+                  src="/images/logo/mercindo-black.png"
                   alt="MGM Logo"
                   width={100}
                   height={100}

@@ -74,7 +74,7 @@ export default function HistoryPage() {
             <AnimatedSection direction="left" className="relative group">
               <div className="overflow-hidden relative rounded-3xl shadow-2xl aspect-video">
                 <Image
-                  src="/documentation/1.jpg"
+                  src="/images/documentation/1.jpg"
                   alt="Our Team"
                   fill
                   className="object-cover rounded-3xl shadow-2xl transition-transform duration-700 aspect-video group-hover:scale-105"
