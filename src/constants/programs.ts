@@ -44,4 +44,19 @@ export const programs: Programs[] = [
       'MGM Peduli is a CSR program from PT Mercindo Global Manufaktur that focuses on community development and social well-being. This program aims to provide assistance and support to local communities in need, as well as to promote sustainable development and social responsibility. In this program, we provide assistance in the form of basic necessities, educational support, and other forms of assistance that can help improve the quality of life of the community. We also conduct various activities that can help improve the skills and knowledge of the community, as well as to promote sustainable development and social responsibility.',
     images: ['/images/programs/air-bersih/1.webp'],
   },
+  {
+    id: '4',
+    slug: 'hari-lingkungan-hidup-sedunia-2025',
+    title: 'Hari Lingkungan Hidup Sedunia 2025',
+    category: 'Sustainability',
+    paragraph: `PT Mercindo Global Manufacturing (MGM) commemorated 'Hari Lingkungan Hidup Sedunia 2025' with a tree-planting event around its factory premises. This activity demonstrates MGM's commitment to preserving the environment and supporting government programs to create a green and healthy environment. Furthermore, this activity also aims to raise employee awareness of the importance of environmental protection and foster a love of nature.`,
+    images: [
+      '/images/programs/lingkungan-hidup/1.jpeg',
+      '/images/programs/lingkungan-hidup/2.jpeg',
+      '/images/programs/lingkungan-hidup/3.jpeg',
+      '/images/programs/lingkungan-hidup/4.jpeg',
+      '/images/programs/lingkungan-hidup/5.jpeg',
+      '/images/programs/lingkungan-hidup/6.jpeg',
+    ],
+  },
 ];
