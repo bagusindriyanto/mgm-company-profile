@@ -59,4 +59,32 @@ export const programs: Programs[] = [
       '/images/programs/lingkungan-hidup/6.jpeg',
     ],
   },
+  {
+    id: '5',
+    slug: 'donor-darah',
+    title: 'Donor Darah',
+    category: 'Community',
+    paragraph: `PT Mercindo Global Manufacturing (MGM) commemorated 'Hari Lingkungan Hidup Sedunia 2025' with a tree-planting event around its factory premises. This activity demonstrates MGM's commitment to preserving the environment and supporting government programs to create a green and healthy environment. Furthermore, this activity also aims to raise employee awareness of the importance of environmental protection and foster a love of nature.`,
+    images: [
+      '/images/programs/donor-darah/1.jpg',
+      '/images/programs/donor-darah/2.jpg',
+      '/images/programs/donor-darah/3.jpg',
+      '/images/programs/donor-darah/4.jpg',
+      '/images/programs/donor-darah/5.jpg',
+      '/images/programs/donor-darah/6.jpg',
+    ],
+  },
+  {
+    id: '6',
+    slug: 'mgm-sports',
+    title: 'MGM Sports',
+    category: 'Employee',
+    paragraph: `PT Mercindo Global Manufacturing (MGM) commemorated 'Hari Lingkungan Hidup Sedunia 2025' with a tree-planting event around its factory premises. This activity demonstrates MGM's commitment to preserving the environment and supporting government programs to create a green and healthy environment. Furthermore, this activity also aims to raise employee awareness of the importance of environmental protection and foster a love of nature.`,
+    images: [
+      '/images/programs/mgm-sports/1.jpg',
+      '/images/programs/mgm-sports/2.jpg',
+      '/images/programs/mgm-sports/3.jpg',
+      '/images/programs/mgm-sports/4.jpg',
+    ],
+  },
 ];

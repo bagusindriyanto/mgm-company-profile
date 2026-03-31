@@ -32,7 +32,7 @@ export default function ProgramsPage() {
               </span>
               <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl md:text-6xl">
                 Initiatives that
-                <span className="bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
                   {' '}
                   make an impact
                 </span>
@@ -54,7 +54,7 @@ export default function ProgramsPage() {
               <Link href={`/programs/${program.slug}`}>
                 <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
                   {/* Image container */}
-                  <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <div className="relative aspect-4/3 w-full overflow-hidden">
                     <Image
                       fill
                       src={program.images?.[0] ?? ''}
@@ -65,7 +65,7 @@ export default function ProgramsPage() {
 
                     {/* Arrow icon — top right */}
                     <div className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-white shadow-lg transition duration-300 opacity-0 group-hover:opacity-100">
-                      <ArrowUpRight className="h-5 w-5 text-primary transition-transform duration-600 rotate-45 group-hover:rotate-0" />
+                      <ArrowUpRight className="h-5 w-5 text-primary" />
                     </div>
                   </div>
 
@@ -102,7 +102,7 @@ export default function ProgramsPage() {
               alt="Want to Partner with Us"
             />
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent" />
             {/* Decorative glow */}
             <div className="pointer-events-none absolute left-1/2 top-0 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-primary/20 blur-[120px]" />
 
@@ -119,7 +119,7 @@ export default function ProgramsPage() {
               </p>
               <button className="group/btn relative overflow-hidden rounded-full bg-primary px-10 py-4 text-lg font-semibold text-white shadow-xl shadow-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/30 active:scale-95">
                 <span className="relative z-10">Submit Proposal</span>
-                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" />
+                <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" />
               </button>
             </div>
           </div>

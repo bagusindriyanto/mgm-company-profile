@@ -205,14 +205,14 @@ function ImageGallerySection({
                 <>
                   <button
                     onClick={() => mainApi?.scrollPrev()}
-                    className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white active:scale-95 md:-left-5 md:h-12 md:w-12"
+                    className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white active:scale-95 md:-left-6 md:h-12 md:w-12"
                     aria-label="Previous slide"
                   >
                     <ChevronLeft className="h-5 w-5 text-foreground" />
                   </button>
                   <button
                     onClick={() => mainApi?.scrollNext()}
-                    className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white active:scale-95 md:-right-5 md:h-12 md:w-12"
+                    className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white active:scale-95 md:-right-6 md:h-12 md:w-12"
                     aria-label="Next slide"
                   >
                     <ChevronRight className="h-5 w-5 text-foreground" />
