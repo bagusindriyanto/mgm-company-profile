@@ -9,7 +9,7 @@ const sections: Section[] = [
     title:
       'To be the Best Glove Manufacturer with Blessing for People Involved',
     description:
-      'Menjadi Perusahaan Sarung Tangan Terbaik dengan Berkah bagi Semua Pihak yang Terlibat.',
+      'Menjadi Perusahaan Sarung Tangan Terbaik dengan Berkat bagi Semua Pihak yang Terlibat.',
     image: '/images/ilustration/1.jpeg',
     layout: 'centered',
   },
