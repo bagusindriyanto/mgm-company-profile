@@ -10,7 +10,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-20 pb-20">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-10 to-transparent bg-linear-to-r from-background via-background/80" />
+        <div className="lg:hidden absolute inset-0 z-10 to-transparent bg-linear-to-r from-background via-background/80" />
         <video
           autoPlay
           muted

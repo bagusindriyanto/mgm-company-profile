@@ -63,7 +63,7 @@ function Footer() {
     <footer className="border-t border-border bg-muted">
       <div className="container px-6 py-12 mx-auto">
         <motion.div
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5"
+          className="grid grid-cols-1 gap-8 lg:grid-cols-5"
           initial={{ opacity: 0, y: 20 }}
           transition={{ duration: ANIMATION_DURATION }}
           viewport={{ once: true, margin: '-100px' }}
