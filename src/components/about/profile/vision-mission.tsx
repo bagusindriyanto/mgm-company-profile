@@ -9,7 +9,7 @@ import {
 } from 'motion/react';
 import Image from 'next/image';
 import { useRef, useState } from 'react';
-import { TextEffect } from '@/components/motion-primitives/text-effect';
+import { TextEffect } from '@/components/ui/motion-primitives/text-effect';
 
 export interface Section {
   title: string;
@@ -174,7 +174,7 @@ const SectionItem = ({
   );
 };
 
-export const VisionMissionScroll = ({ sections }: { sections: Section[] }) => {
+export const VisionMissionSection = ({ sections }: { sections: Section[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 

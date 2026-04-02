@@ -1,7 +1,7 @@
 import {
-  VisionMissionScroll,
+  VisionMissionSection,
   type Section,
-} from '@/components/vision-mission-scroll';
+} from '@/components/about/profile/vision-mission';
 
 const sections: Section[] = [
   {
@@ -32,5 +32,5 @@ const sections: Section[] = [
 ];
 
 export default function ProfilePage() {
-  return <VisionMissionScroll sections={sections} />;
+  return <VisionMissionSection sections={sections} />;
 }

@@ -50,7 +50,7 @@ export default function ProgramsPage() {
       <section className="container mx-auto px-6">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {programs.map((program, idx) => (
-            <AnimatedSection key={idx} delay={idx * 0.08}>
+            <AnimatedSection key={program.id} delay={idx * 0.08}>
               <Link href={`/programs/${program.slug}`}>
                 <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
                   {/* Image container */}

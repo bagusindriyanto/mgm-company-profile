@@ -1,6 +1,6 @@
-import { Timeline } from '@/components/aceternity/timeline';
+import { Timeline } from '@/components/ui/aceternity/timeline';
 
-export default function TimelineDemo() {
+export default function TimelineSection() {
   const data = [
     {
       title: '2012',

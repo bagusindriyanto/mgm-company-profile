@@ -1,7 +1,7 @@
 import AnimatedSection from '@/components/animated-section';
 import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
-import TimelineDemo from '@/components/timeline-demo';
+import TimelineSection from '@/components/about/history/timeline';
 
 const teams = [
   {
@@ -98,7 +98,7 @@ export default function HistoryPage() {
         centered
         className="my-20"
       />
-      <TimelineDemo />
+      <TimelineSection />
 
       {/* Team Section */}
       <section className="container px-6 py-20 mx-auto">

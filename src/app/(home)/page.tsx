@@ -3,7 +3,7 @@ import { ArrowRight, ShieldCheck, Zap, Globe } from 'lucide-react';
 import AnimatedSection from '@/components/animated-section';
 import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
-import LogoCloud from '@/components/logo-cloud';
+import LogoCloud from '@/components/home/logo-cloud';
 
 export default function HomePage() {
   return (
