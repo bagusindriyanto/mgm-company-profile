@@ -40,7 +40,7 @@ export default function HomePage() {
                 Our Products
               </Link>
               <Link
-                href="/history"
+                href="/about/history"
                 className="px-8 py-4 text-lg rounded-full border-2 backdrop-blur-sm transition border-primary/20 bg-background/50 text-foreground hover:bg-primary/5 hover:border-primary"
               >
                 Our Story
@@ -113,7 +113,7 @@ export default function HomePage() {
                 competitive sports.
               </p>
               <Link
-                href="/programs"
+                href="/products"
                 className="flex gap-2 items-center text-primary hover:underline"
               >
                 Explore Technology <ArrowRight size={20} />
@@ -138,7 +138,7 @@ export default function HomePage() {
                 comfort.
               </p>
               <Link
-                href="/programs"
+                href="/products"
                 className="flex gap-2 items-center text-primary hover:underline"
               >
                 View Collection <ArrowRight size={20} />

@@ -117,10 +117,12 @@ export default function ProgramsPage() {
                 We are always looking for innovative tech startups and
                 sustainability partners to collaborate on our future programs.
               </p>
-              <button className="group/btn relative overflow-hidden rounded-full bg-primary px-10 py-4 text-lg font-semibold text-white shadow-xl shadow-primary/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/30 active:scale-95">
-                <span className="relative z-10">Submit Proposal</span>
-                <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover/btn:translate-x-full" />
-              </button>
+              <Link
+                href="/contact"
+                className="px-8 py-4 text-lg rounded-full transition bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105"
+              >
+                Submit Proposal
+              </Link>
             </div>
           </div>
         </AnimatedSection>

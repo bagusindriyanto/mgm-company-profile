@@ -35,7 +35,7 @@ export default function ProductsPage() {
           className="p-12 text-center rounded-3xl bg-muted/50"
         >
           <h2 className="mb-4 text-2xl ">Looking for Custom Orders?</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-secondary">
+          <p className="mx-auto mb-8 max-w-2xl">
             We provide specialized bulk manufacturing and custom branding for
             sports teams, athletic facilities, and corporate partners.
           </p>
