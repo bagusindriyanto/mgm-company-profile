@@ -1,11 +1,10 @@
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from 'lucide-react';
 import AnimatedSection from '@/components/animated-section';
-import Image from 'next/image';
 // import SectionHeader from '@/components/SectionHeader';
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col gap-24 pb-24">
+    <div className="flex flex-col gap-20 pb-20">
       {/* Hero Section */}
       <section className="overflow-hidden relative pt-32 pb-48 bg-primary text-primary-foreground">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 bg-white/5" />
@@ -42,7 +41,8 @@ export default function ContactPage() {
                     <div>
                       <p className="mb-1 text-foreground">Our Location</p>
                       <p className="text-sm text-secondary-foreground">
-                        123 Manufacturing Way, Tech District, IC 12345
+                        Semarang - Solo Toll Road No.19, RT.001/RW.001, Samban,
+                        Bawen, Semarang Regency, Central Java 50661
                       </p>
                     </div>
                   </div>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                     <div>
                       <p className="mb-1 text-foreground">Phone Number</p>
                       <p className="text-sm text-secondary-foreground">
-                        +1 (234) 567-890
+                        +6298 523 715
                       </p>
                     </div>
                   </div>
@@ -66,7 +66,7 @@ export default function ContactPage() {
                     <div>
                       <p className="mb-1 text-foreground">Email Address</p>
                       <p className="text-sm text-secondary-foreground">
-                        sales@mgmsports.com
+                        info@mgmsports.com
                       </p>
                     </div>
                   </div>
@@ -78,7 +78,10 @@ export default function ContactPage() {
                     <div>
                       <p className="mb-1 text-foreground">Business Hours</p>
                       <p className="text-sm text-secondary-foreground">
-                        Mon - Fri: 08:00 - 18:00 (GMT+7)
+                        Mon to Fri: 07:30 - 15:30 (GMT+7)
+                      </p>
+                      <p className="text-sm text-secondary-foreground">
+                        Saturday: 07:30 - 13:00 (GMT+7)
                       </p>
                     </div>
                   </div>
@@ -167,7 +170,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full bg-primary text-primary-foreground font-extrabold py-5 rounded-xl hover:bg-primary/90 transition hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20"
                 >
-                  <Send size={20} /> Send Inquiry
+                  <Send size={20} /> Submit Details
                 </button>
               </form>
             </AnimatedSection>
@@ -179,26 +182,17 @@ export default function ContactPage() {
       <section className="container px-6 mx-auto">
         <AnimatedSection
           direction="up"
-          className="rounded-3xl overflow-hidden h-[400px] border border-border relative group"
+          className="rounded-3xl overflow-hidden h-100 border border-border relative group"
         >
-          <Image
-            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=70&w=1200"
-            alt="Global Map"
-            fill
-            className="object-cover opacity-50 grayscale transition group-hover:grayscale-0 group-hover:opacity-100"
-          />
-          <div className="absolute inset-0 bg-primary/10" />
-          <div className="flex relative justify-center items-center h-full">
-            <div className="p-8 text-center rounded-2xl border backdrop-blur-sm bg-card/60 border-white/20">
-              <div className="flex justify-center items-center mx-auto mb-4 w-16 h-16 text-white rounded-full animate-bounce bg-primary">
-                <MapPin size={32} />
-              </div>
-              <h4 className="mb-2 text-xl">Visit Our Factory</h4>
-              <p className="text-sm text-secondary-foreground">
-                Interactive map coming soon...
-              </p>
-            </div>
-          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1586.0532852920298!2d110.41774553380962!3d-7.205079955989248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7086afe10c65e5%3A0x6df2459fe32a536d!2sPT.%20Mercindo%20Global%20Manufaktur!5e0!3m2!1sen!2sid!4v1775719225170!5m2!1sen!2sid"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </AnimatedSection>
       </section>
     </div>

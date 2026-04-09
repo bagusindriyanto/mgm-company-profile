@@ -43,9 +43,10 @@ const links: Links = {
     {
       id: 1,
       icon: MapPin,
-      description: '123 Manufacturing Way, Industrial City, IC 12345',
+      description:
+        'Semarang - Solo Toll Rd No.KM No.19, RT.001/RW.001, Samban, Bawen, Semarang Regency, Central Java 50661',
     },
-    { id: 2, icon: Phone, description: '+1 (234) 567-890' },
+    { id: 2, icon: Phone, description: '+6298 523 715' },
     { id: 3, icon: Mail, description: 'info@mgmsports.com' },
   ],
 };
