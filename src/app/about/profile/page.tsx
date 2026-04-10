@@ -7,7 +7,7 @@ const sections: Section[] = [
   {
     subtitle: 'Our Vision',
     title:
-      'To be the Best Sport Glove Manufacturer with Blessing for People Involved',
+      'To be the Best Sport Glove Manufacturer with Blessing for All People Involved',
     description:
       'Menjadi Perusahaan Sarung Tangan Olahraga Terbaik dengan Berkat bagi Semua Pihak yang Terlibat.',
     image: '/images/ilustration/1.jpeg',
