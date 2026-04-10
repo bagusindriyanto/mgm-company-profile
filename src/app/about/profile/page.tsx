@@ -7,19 +7,18 @@ const sections: Section[] = [
   {
     subtitle: 'Our Vision',
     title:
-      'To be the Best Glove Manufacturer with Blessing for People Involved',
+      'To be the Best Sport Glove Manufacturer with Blessing for People Involved',
     description:
-      'Menjadi Perusahaan Sarung Tangan Terbaik dengan Berkat bagi Semua Pihak yang Terlibat.',
+      'Menjadi Perusahaan Sarung Tangan Olahraga Terbaik dengan Berkat bagi Semua Pihak yang Terlibat.',
     image: '/images/ilustration/1.jpeg',
     layout: 'centered',
   },
   {
     subtitle: 'Our Mission',
-    title: 'Our Strategic Commitment to Excellence and Impact',
-    description:
-      '1. Global Leadership\n2. Integrated Supply Chain\n3. Human Empowerment\n4. Social Impact',
+    title:
+      'Our Strategic Commitment to be Excellence and Impactful through Top Quality Products, Continuous Innovation, Customer Satisfaction, and Teamwork',
     image: '/images/ilustration/2.jpeg',
-    layout: 'split',
+    layout: 'centered',
   },
   {
     subtitle: 'Corporate Values',

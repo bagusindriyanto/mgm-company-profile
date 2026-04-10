@@ -13,7 +13,7 @@ import { TextEffect } from '@/components/ui/motion-primitives/text-effect';
 
 export interface Section {
   title: string;
-  description: string;
+  description?: string;
   subtitle?: string;
   image: string;
   layout?: 'centered' | 'split';
@@ -132,14 +132,14 @@ const SectionItem = ({
                 preset="slide"
                 per="word"
                 as="h2"
-                className="mb-8 text-4xl font-bold leading-[1.1] text-white md:text-6xl lg:text-7xl"
+                className="mb-8 text-4xl font-bold leading-[1.1] text-white md:text-6xl"
                 trigger={isActive}
                 delay={0.1}
               >
                 {section.title}
               </TextEffect>
 
-              {section.layout !== 'split' && (
+              {section.layout !== 'split' && section.description && (
                 <TextEffect
                   preset="fade"
                   per="word"
