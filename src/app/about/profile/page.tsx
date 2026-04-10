@@ -16,7 +16,7 @@ const sections: Section[] = [
   {
     subtitle: 'Our Mission',
     title:
-      'Our Strategic Commitment to be Excellence and Impactful through Top Quality Products, Continuous Innovation, Customer Satisfaction, and Teamwork',
+      'Our Strategic Commitment to be Excellence and Impactful through Top Quality Products, Continuous Innovation, Focusing on Customer Satisfaction, and Teamwork',
     image: '/images/ilustration/2.jpeg',
     layout: 'centered',
   },

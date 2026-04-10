@@ -153,7 +153,7 @@ const SectionItem = ({
               )}
             </div>
 
-            {section.layout === 'split' && (
+            {section.layout !== 'split' && section.description && (
               <div className="md:w-1/2 border-l border-white/20 pl-12 py-4">
                 <TextEffect
                   preset="slide"
