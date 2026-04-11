@@ -12,7 +12,7 @@ export function BentoGrid() {
           <AnimatedSection
             key={idx}
             delay={idx * 0.08}
-            className={cn('group', product.span)}
+            className={cn('group')}
           >
             <div className="overflow-hidden relative w-full h-full rounded-3xl cursor-pointer">
               {/* Background image */}

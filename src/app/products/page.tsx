@@ -1,7 +1,7 @@
 import SectionHeader from '@/components/section-header';
 import AnimatedSection from '@/components/animated-section';
+import ProductGallery from '@/components/product-gallery';
 import Link from 'next/link';
-import { BentoGrid } from '@/components/bento-grid';
 
 export const metadata = {
   title: 'Products | MGM Company Profile',
@@ -22,11 +22,8 @@ export default function ProductsPage() {
         </AnimatedSection>
       </section>
 
-      {/* Gallery Section */}
-      <BentoGrid />
-
-      {/* Product Gallery Section */}
-      {/* <CarouselWithThumbs /> */}
+      {/* Product Gallery with Category Filter */}
+      <ProductGallery />
 
       {/* Footer Banner */}
       <section className="container px-6 mx-auto mt-10">
