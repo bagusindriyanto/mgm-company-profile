@@ -4,6 +4,7 @@ import AnimatedSection from '@/components/animated-section';
 import SectionHeader from '@/components/section-header';
 import Image from 'next/image';
 import LogoCloud from '@/components/home/logo-cloud';
+import MarketShareSection from '@/components/home/market-share';
 
 export default function HomePage() {
   return (
@@ -147,6 +148,9 @@ export default function HomePage() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* Market Share */}
+      <MarketShareSection />
 
       {/* Why Us / Values */}
       <section className="py-24 bg-muted">
