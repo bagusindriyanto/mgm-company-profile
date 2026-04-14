@@ -7,24 +7,26 @@ import { products, categories, type Category } from '@/constants/products';
 import { cn } from '@/lib/utils';
 import {
   Card,
-  CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
   CardFooter,
-  CardAction,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import {
+  DumbbellIcon,
+  HandbagIcon,
+  HammerIcon,
+  type LucideIcon,
+} from 'lucide-react';
 
 /* ── Category pill icon map ────────────────────────── */
-const categoryIcons: Record<Category, string> = {
-  All: '✦',
-  'Gym & Fitness': '💪',
-  Golf: '⛳',
-  Cycling: '🚴',
-  Running: '🏃',
-  'Ski & Winter': '🎿',
+const categoryIcons: Record<Category, LucideIcon | null> = {
+  All: null,
+  Sports: DumbbellIcon,
+  Dress: HandbagIcon,
+  Working: HammerIcon,
 };
 
 export default function ProductGallery() {
@@ -44,6 +46,7 @@ export default function ProductGallery() {
       <div className="flex flex-wrap gap-2 justify-center mb-12">
         {categories.map((cat) => {
           const isActive = cat === active;
+          const Icon = categoryIcons[cat];
           return (
             <button
               key={cat}
@@ -71,7 +74,7 @@ export default function ProductGallery() {
                 />
               )}
               <span className="flex relative z-10 gap-2 items-center">
-                <span className="text-base">{categoryIcons[cat]}</span>
+                {Icon && <Icon className="size-4" />}
                 {cat}
               </span>
             </button>
@@ -105,7 +108,7 @@ export default function ProductGallery() {
       <LayoutGroup>
         <motion.div
           layout
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4"
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((product) => (
@@ -165,17 +168,31 @@ function ProductCard({
   category: string;
 }) {
   return (
-    <Card className="pt-0 mx-auto w-full max-w-sm h-full" id={`product-${id}`}>
-      <img
-        src={image}
-        alt={title}
-        className="object-contain p-4 w-full border-b aspect-square"
-      />
+    <Card
+      className="overflow-hidden data-[size=sm]:py-0 mx-auto w-full h-full transition-all duration-700 group hover:shadow-lg hover:-translate-y-1"
+      id={`product-${id}`}
+      size="sm"
+    >
+      <div className="overflow-hidden relative border-b aspect-5/4">
+        <Image
+          fill
+          src={image}
+          alt={title}
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-contain p-2 transition-transform duration-700 sm:p-4 group-hover:scale-110"
+        />
+        <Badge
+          className="absolute top-2 right-2 sm:top-3 sm:right-3 z-10 text-[10px] sm:text-xs"
+          variant="secondary"
+        >
+          {category}
+        </Badge>
+      </div>
       <CardHeader className="flex-1">
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardFooter className="mt-auto">
+      <CardFooter className="pb-4">
         <Button className="w-full">View Product</Button>
       </CardFooter>
     </Card>

@@ -14,12 +14,10 @@ export default function ProductsPage() {
     <div className="flex flex-col gap-20 pt-32 pb-20">
       {/* Hero Header */}
       <section className="container px-6 mx-auto">
-        <AnimatedSection direction="up" className="max-w-3xl">
-          <SectionHeader
-            title="Our Collection"
-            subtitle="Discover our complete range of precision-crafted athletic equipment and apparel, designed for peak performance."
-          />
-        </AnimatedSection>
+        <SectionHeader
+          title="Our Collection"
+          subtitle="Discover our complete range of precision-crafted athletic equipment and apparel, designed for peak performance."
+        />
       </section>
 
       {/* Product Gallery with Category Filter */}
@@ -31,7 +29,7 @@ export default function ProductsPage() {
           direction="up"
           className="p-12 text-center rounded-3xl bg-muted/50"
         >
-          <h2 className="mb-4 text-2xl ">Looking for Custom Orders?</h2>
+          <h2 className="mb-4 text-2xl">Looking for Custom Orders?</h2>
           <p className="mx-auto mb-8 max-w-2xl">
             We provide specialized bulk manufacturing and custom branding for
             sports teams, athletic facilities, and corporate partners.
