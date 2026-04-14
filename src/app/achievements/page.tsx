@@ -61,10 +61,10 @@ const galleryImages = [
 
 export default function AchievementsPage() {
   return (
-    <div className="flex flex-col gap-24 pb-24">
+    <div className="flex flex-col gap-20 pb-20">
       {/* Header */}
-      <section className="bg-primary/5 py-24">
-        <div className="container mx-auto px-6">
+      <section className="py-24 bg-primary/5">
+        <div className="container px-6 mx-auto">
           <SectionHeader
             title="Achievements & Recognition"
             subtitle="Our commitment to excellence is reflected in our awards and certifications."
@@ -73,32 +73,32 @@ export default function AchievementsPage() {
       </section>
 
       {/* Awards Section */}
-      <section className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <section className="container px-6 mx-auto">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div className="lg:col-span-1">
-            <h3 className="text-3xl font-extrabold flex items-center gap-3 mb-6">
+            <h3 className="flex gap-3 items-center mb-6 text-3xl font-extrabold">
               <Award className="text-primary" size={40} /> Awards
             </h3>
-            <p className="text-secondary-foreground leading-relaxed mb-8">
+            <p className="mb-8 leading-relaxed text-secondary-foreground">
               MGM has been recognized by industry leaders for our innovation,
               quality standards, and commitment to environmental sustainability.
             </p>
           </div>
-          <div className="lg:col-span-2 space-y-6">
+          <div className="space-y-6 lg:col-span-2">
             {achievements.map((award, idx) => (
               <AnimatedSection
                 key={idx}
                 direction="right"
                 delay={idx * 0.1}
-                className="bg-card border border-border rounded-2xl p-6 flex gap-6 items-start hover:border-primary/50 transition-colors group"
+                className="flex gap-6 items-start p-6 rounded-2xl border transition-colors bg-card border-border hover:border-primary/50 group"
               >
-                <div className="bg-muted text-primary px-4 py-2 rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition">
+                <div className="px-4 py-2 rounded-lg transition bg-muted text-primary group-hover:bg-primary group-hover:text-primary-foreground">
                   {award.year}
                 </div>
                 <div>
-                  <h4 className="text-xl mb-1">{award.title}</h4>
-                  <p className="text-primary text-sm  mb-2">{award.org}</p>
-                  <p className="text-secondary-foreground text-sm leading-relaxed">
+                  <h4 className="mb-1 text-xl">{award.title}</h4>
+                  <p className="mb-2 text-sm text-primary">{award.org}</p>
+                  <p className="text-sm leading-relaxed text-secondary-foreground">
                     {award.desc}
                   </p>
                 </div>
@@ -109,10 +109,10 @@ export default function AchievementsPage() {
       </section>
 
       {/* Certifications Section */}
-      <section className="bg-muted/50 py-24">
-        <div className="container mx-auto px-6">
+      <section className="py-24 bg-muted/50">
+        <div className="container px-6 mx-auto">
           <SectionHeader title="Global Certifications" centered />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {certificates.map((cert, idx) => (
               <AnimatedSection
                 key={idx}
@@ -120,10 +120,10 @@ export default function AchievementsPage() {
                 className="flex h-full"
               >
                 <div className="bg-background border border-border h-full w-full rounded-2xl p-6 flex items-center gap-4 hover:scale-[1.02] transition-transform cursor-pointer">
-                  <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
+                  <div className="flex justify-center items-center w-10 h-10 rounded-full bg-emerald-500/10 shrink-0">
                     <FileCheck className="text-emerald-600" size={20} />
                   </div>
-                  <span className="text-foreground leading-tight">{cert}</span>
+                  <span className="leading-tight text-foreground">{cert}</span>
                 </div>
               </AnimatedSection>
             ))}
@@ -132,18 +132,18 @@ export default function AchievementsPage() {
       </section>
 
       {/* Activity Documentation */}
-      <section className="container mx-auto px-6">
+      <section className="container px-6 mx-auto">
         <SectionHeader
           title="Activity Documentation"
           subtitle="A visual journey through our facilities, events, and collaborative summits."
           centered
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((img, idx) => (
             <AnimatedSection
               key={idx}
               delay={idx * 0.05}
-              className="group relative aspect-square overflow-hidden rounded-3xl bg-muted"
+              className="overflow-hidden relative rounded-3xl group aspect-5/4 bg-muted"
             >
               <Image
                 fill
@@ -151,8 +151,8 @@ export default function AchievementsPage() {
                 src={img.url}
                 alt={img.title}
               />
-              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                <div className="flex items-center gap-2 text-white mb-2">
+              <div className="flex absolute inset-0 flex-col justify-end p-8 to-transparent opacity-0 transition-opacity duration-300 bg-linear-to-t from-black/80 via-black/20 group-hover:opacity-100">
+                <div className="flex gap-2 items-center mb-2 text-white">
                   <Camera size={18} />
                   <span className="text-xs uppercase">Live Action</span>
                 </div>

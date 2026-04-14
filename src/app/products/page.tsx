@@ -11,13 +11,15 @@ export const metadata = {
 
 export default function ProductsPage() {
   return (
-    <div className="flex flex-col gap-20 pt-32 pb-20">
+    <div className="flex flex-col gap-20 pb-20">
       {/* Hero Header */}
-      <section className="container px-6 mx-auto">
-        <SectionHeader
-          title="Our Collection"
-          subtitle="Discover our complete range of precision-crafted athletic equipment and apparel, designed for peak performance."
-        />
+      <section className="py-24 bg-primary/5">
+        <div className="container px-6 mx-auto">
+          <SectionHeader
+            title="Our Collection"
+            subtitle="Discover our complete range of precision-crafted athletic equipment and apparel, designed for peak performance."
+          />
+        </div>
       </section>
 
       {/* Product Gallery with Category Filter */}
