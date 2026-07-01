@@ -26,8 +26,8 @@ export default function HomePage() {
         <div className="container relative z-20 px-6 mx-auto">
           <AnimatedSection direction="up" className="max-w-3xl">
             <h1 className="mb-6 text-5xl sm:text-7xl">
-              Engineering <span className="text-primary">Athletic</span>{' '}
-              Performance
+              Mercindo <span className="text-primary">Global</span>{' '}
+              Manufacture
             </h1>
             <p className="mb-10 max-w-2xl text-xl leading-relaxed text-secondary-foreground">
               From high-grip tactical gloves to ultra-breathable running
