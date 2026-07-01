@@ -30,8 +30,7 @@ export default function HomePage() {
               Manufaktur
             </h1>
             <p className="mb-10 max-w-2xl text-xl leading-relaxed text-secondary-foreground">
-              From high-grip tactical gloves to ultra-breathable running
-              apparel, MGM manufactures the gear that pushes boundaries.
+              Driven by trust, we lead our industry transformation to create positive impact for all
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
