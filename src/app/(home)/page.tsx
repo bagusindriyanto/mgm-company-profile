@@ -101,16 +101,17 @@ export default function HomePage() {
             className="group relative h-[400px] overflow-hidden rounded-3xl bg-muted"
           >
             <Image
-              src="https://images.unsplash.com/photo-1634852836003-c0aa5b67d243?q=80&w=870&auto=format&fit=crop"
-              alt="Technical Gloves"
+              src="https://share.gemini.google/UwRQYmWfl8Fg"
+              alt="MGM Programs"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="flex absolute inset-0 flex-col justify-end p-10 to-transparent bg-linear-to-t from-black/80 via-black/20">
-              <h3 className="mb-2 text-3xl text-white">Technical Gloves</h3>
+              <h3 className="mb-2 text-3xl text-white">MGM Programs</h3>
               <p className="mb-6 max-w-sm text-gray-300">
-                Premium grip and protection for extreme environments and
-                competitive sports.
+                The MGM Program by PT Mercindo Global Manufaktur is a holistic initiative designed 
+                to create a positive societal impact and enhance human happiness 
+                through CSR, environmental sustainability, community health, and employee well-being efforts. 
               </p>
               <Link
                 href="/products"
