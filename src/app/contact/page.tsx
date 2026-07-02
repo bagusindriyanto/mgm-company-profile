@@ -66,7 +66,7 @@ export default function ContactPage() {
                     <div>
                       <p className="mb-1 text-foreground">Email Address</p>
                       <p className="text-sm text-secondary-foreground">
-                        info@mgmsports.com
+                        dinar@mgmglove.com
                       </p>
                     </div>
                   </div>
