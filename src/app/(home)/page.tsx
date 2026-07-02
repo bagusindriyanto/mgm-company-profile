@@ -105,7 +105,7 @@ export default function HomePage() {
               alt="MGM Programs"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
-              unoptimized
+              unoptimized // Tambahkan properti ini
             />
             <div className="flex absolute inset-0 flex-col justify-end p-10 to-transparent bg-linear-to-t from-black/80 via-black/20">
               <h3 className="mb-2 text-3xl text-white">MGM Programs</h3>
