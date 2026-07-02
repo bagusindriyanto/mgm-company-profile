@@ -101,7 +101,7 @@ export default function HomePage() {
             className="group relative h-[400px] overflow-hidden rounded-3xl bg-muted"
           >
             <Image
-              src="https://drive.google.com/file/d/1zxzcdUE__-mQdE48P8nP1MmovIP5BaWf/view?usp=sharing"
+              src="[https://drive.google.com/uc?export=view&id=1zxzcdUE__-mQdE48P8nP1MmovIP5BaWf](https://drive.google.com/uc?export=view&id=1zxzcdUE__-mQdE48P8nP1MmovIP5BaWf)"
               alt="MGM Programs"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
