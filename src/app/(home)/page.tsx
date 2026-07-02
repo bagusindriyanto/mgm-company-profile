@@ -127,13 +127,13 @@ export default function HomePage() {
             className="group relative h-[400px] overflow-hidden rounded-3xl bg-muted"
           >
             <Image
-              src="https://images.unsplash.com/flagged/photo-1556746834-1cb5b8fabd54?q=80&w=872&auto=format&fit=crop"
-              alt="Aero-Running Apparel"
+              src="https://6a4601827caaf70790b5aff2.imgix.net/sandbox/Gemini_Generated_Image_rgv1u6rgv1u6rgv1.png"
+              alt="MGM Products"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="flex absolute inset-0 flex-col justify-end p-10 to-transparent bg-linear-to-t from-black/80 via-black/20">
-              <h3 className="mb-2 text-3xl text-white">Aero-Running Apparel</h3>
+              <h3 className="mb-2 text-3xl text-white">MGM Products</h3>
               <p className="mb-6 max-w-sm text-gray-300">
                 Lightweight, moisture-wicking fabrics engineered for speed and
                 comfort.
