@@ -101,11 +101,10 @@ export default function HomePage() {
             className="group relative h-[400px] overflow-hidden rounded-3xl bg-muted"
           >
             <Image
-              src="https://drive.google.com/uc?export=view&id=1zxzcdUE__-mQdE48P8nP1MmovIP5BaWf"
+              src="/images/programs/mgmprograms.png"
               alt="MGM Programs"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"
-              unoptimized // Tambahkan properti ini
             />
             <div className="flex absolute inset-0 flex-col justify-end p-10 to-transparent bg-linear-to-t from-black/80 via-black/20">
               <h3 className="mb-2 text-3xl text-white">MGM Programs</h3>
